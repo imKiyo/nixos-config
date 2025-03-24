@@ -52,7 +52,7 @@ in {
 
       monitor = [
         "HDMI-A-3,1920x1080@60,auto,1"
-        "DVI-I-1,1680x1050@auto,left,-1680,2"
+        "DVI-I-1,1680x1050@auto,left,-1680,1"
         #"eDP-2,highres,0x0,1"
         #"DP-7, disable"
         #"DP-8, disable"
