@@ -20,6 +20,7 @@
     ../../home/programs/tailscale
     #../../home/programs/ghostty
     ../../home/programs/nvf # neovim but more autistic
+    ../../home/programs/yazi
 
     # Scripts
     ../../home/scripts # All scripts
@@ -67,6 +68,8 @@
       # Utils
       zip
       unzip
+      rar
+      unrar
       optipng
       pfetch
       btop
