@@ -80,7 +80,7 @@ in {
       "bar.volume.label" = true;
       "bar.network.truncation_size" = 12;
       "bar.bluetooth.label" = false;
-      "bar.clock.format" = "%a %b %d  %H:%M";
+      "bar.clock.format" = "%H:%M - %a %b %d";
       "bar.notifications.show_total" = true;
       "theme.notification.border_radius" = "${toString rounding}px";
       "theme.osd.enable" = true;

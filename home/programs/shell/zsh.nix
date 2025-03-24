@@ -77,6 +77,8 @@ in {
       icat = "${pkgs.kitty}/bin/kitty +kitten icat";
       ssh = "kitty +kitten ssh";
 
+      blep = "sudo nixos-rebuild switch --flake ~/.config/nixos#nixos";
+
       wireguard-import = "nmcli connection import type wireguard file";
 
       notes =

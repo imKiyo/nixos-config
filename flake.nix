@@ -1,5 +1,4 @@
 {
-  # https://github.com/anotherhadi/nixy
   description = ''
     Nix os conf.
   '';

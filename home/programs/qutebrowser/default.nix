@@ -10,9 +10,9 @@ let
   settings = ''
     {
       "config": {
-        "title" : "Welcome Home",
+        "title" : "blep",
         "openLinksInNewTab": false,
-        "locale": "fr-FR",
+        "locale": "pl_PL",
         "colors": {
           "primary": "${accent}",
           "background": "${background}",

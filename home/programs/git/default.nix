@@ -33,7 +33,6 @@ in {
       forgor = "commit --amend --no-edit";
       graph = "log --all --decorate --graph --oneline";
       oops = "checkout --";
-      blep = "sudo nixos-rebuild switch --flake ~/.config/nixos#nixos";
       l = "log";
       r = "rebase";
       s = "status --short";
