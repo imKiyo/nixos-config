@@ -52,15 +52,7 @@ in {
 
       monitor = [
         "HDMI-A-3,1920x1080@60,auto,1"
-        "DVI-I-1,1680x1050@auto,left,-1680,1"
-        #"eDP-2,highres,0x0,1"
-        #"DP-7, disable"
-        #"DP-8, disable"
-        #"DP-9, disable"
-        #"DP-2, 1920x1080@60, auto, 1"
-        #"HDMI-A-1,3440x1440@99.98,auto,1"
-        #"desc:United Microelectr Corporation UMC SHARP,3840x2160,auto,2"
-        #",prefered,auto,1"
+        "DVI-I-1,1680x1050@auto,left,-1680,0"
       ];
 
       env = [
