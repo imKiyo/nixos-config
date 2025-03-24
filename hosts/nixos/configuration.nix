@@ -14,7 +14,7 @@
     ../../nixos/utils.nix
     # ../../nixos/docker.nix
     ../../nixos/tailscale.nix
-    ../../nixos/steam.nix
+    #../../nixos/steam.nix
 
     # You should let those lines as is
     ./hardware-configuration.nix
