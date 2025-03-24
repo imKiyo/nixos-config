@@ -80,6 +80,8 @@
       # Backup
       firefox
       vscode
+
+      # Testing apps
     ];
 
     # Import my profile picture, used by the hyprpanel dashboard

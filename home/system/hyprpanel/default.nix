@@ -40,7 +40,7 @@ in {
           "right" = [
             "media"
             "systray"
-            "volume"            
+            "volume"
             "notifications"
           ];
         };

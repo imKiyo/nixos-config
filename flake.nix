@@ -15,13 +15,19 @@
     nixcord.url = "github:kaylorben/nixcord";
     sops-nix.url = "github:Mic92/sops-nix";
     nixarr.url = "github:rasmus-kirk/nixarr";
+    nix-gaming.url = "github:fufexan/nix-gaming";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
+
+    nvf = {
+      url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    yazi-plugins = {
+      url = "github:yazi-rs/plugins";
+      flake = false;
     };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
@@ -30,6 +36,9 @@
     hyprspace = {
       url = "github:KZDKM/Hyprspace";
       inputs.hyprland.follows = "hyprland";
+    };
+    ghostty = {
+      url = "github:ghostty-org/ghostty";
     };
   };
 
