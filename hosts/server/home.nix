@@ -32,6 +32,8 @@
       # Utils
       zip
       unzip
+      rar
+      unrar
       optipng
       pfetch
       btop
