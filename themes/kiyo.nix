@@ -5,7 +5,7 @@
     default = {
       rounding = 0;
       gaps-in = 2;
-      gaps-out = 2 * 2;
+      gaps-out = 10 * 2;
       active-opacity = 0.96;
       inactive-opacity = 0.95;
       blur = true;
@@ -42,7 +42,7 @@
         base0A = "#e0ac16"; # Classes, Markup Bold, Search Text Background
         base0B = "#b7ba53"; # Strings, Inherited Class, Markup Code, Diff Inserted
         base0C = "#6eb958"; # Support, Regular Expressions, Escape Characters, Markup Quotes
-        base0D = "#88a4d3"; # Functions, Methods, Attribute IDs, Headings, Accent color
+        base0D = "#b4a490"; # Functions, Methods, Attribute IDs, Headings, Accent color
         base0E = "#bb90e2"; # Keywords, Storage, Selector, Markup Italic, Diff Changed
         base0F = "#b49368"; # Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
       };
