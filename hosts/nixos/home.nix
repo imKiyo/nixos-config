@@ -18,7 +18,7 @@
     ../../home/programs/duckduckgo-colorscheme
     ../../home/programs/discord
     ../../home/programs/tailscale
-    ../../home/programs/ghostty
+    #../../home/programs/ghostty
     ../../home/programs/nvf # neovim but more autistic
 
     # Scripts
