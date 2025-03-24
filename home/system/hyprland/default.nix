@@ -52,7 +52,7 @@ in {
 
       monitor = [
         "HDMI-A-3,1920x1080@60,auto,1"
-        "DVI-I-1,1680x1050@60,auto,1transform,1"
+        "DVI-I-1,1680x1050@60,auto,1,transform,1"
       ];
 
       env = [
