@@ -35,9 +35,10 @@ in {
     layout = {
       "bar.layouts" = {
         "*" = {
-          "left" = [ "dashboard" "workspaces" "windowtitle" "media" ];
+          "left" = [ "dashboard" "workspaces" "windowtitle" ];
           "middle" = [ "clock" ];
           "right" = [
+            "media"
             "systray"
             "volume"            
             "notifications"

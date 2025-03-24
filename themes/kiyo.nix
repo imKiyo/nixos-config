@@ -4,12 +4,12 @@
     type = lib.types.attrs;
     default = {
       rounding = 0;
-      gaps-in = 2;
-      gaps-out = 10 * 2;
+      gaps-in = 1;
+      gaps-out = 1;
       active-opacity = 0.96;
       inactive-opacity = 0.95;
       blur = true;
-      border-size = 3;
+      border-size = 2;
       animation-speed = "fast"; # "fast" | "medium" | "slow"
       fetch = "neofetch"; # "nerdfetch" | "neofetch" | "pfetch" | "none"
 
