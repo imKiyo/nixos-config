@@ -75,12 +75,12 @@ in {
       "theme.bar.transparent" = "${if transparent then "true" else "false"}";
       "bar.workspaces.show_numbered" = false;
       "bar.workspaces.workspaces" = 5;
-      "bar.workspaces.hideUnoccupied" = false;
+      "bar.workspaces.hideUnoccupied" = true;
       "bar.windowtitle.label" = true;
-      "bar.volume.label" = false;
+      "bar.volume.label" = true;
       "bar.network.truncation_size" = 12;
       "bar.bluetooth.label" = false;
-      "bar.clock.format" = "%a %b %d   %H:%M";
+      "bar.clock.format" = "%a %b %d  %H:%M";
       "bar.notifications.show_total" = true;
       "theme.notification.border_radius" = "${toString rounding}px";
       "theme.osd.enable" = true;
