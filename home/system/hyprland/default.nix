@@ -51,8 +51,8 @@ in {
       exec-once = [ "dbus-update-activation-environment --systemd --all" ];
 
       monitor = [
-        "HDMI-A-3,1920x1080@60,auto,1"
-        "DVI-I-1,1680x1050@auto,left,-1680,0"
+        "HDMI-A-3,1920x1080@60,0,0,1"
+        "DVI-I-1,1680x1050@60,-1680,0,1"
       ];
 
       env = [
