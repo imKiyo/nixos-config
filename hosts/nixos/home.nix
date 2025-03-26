@@ -33,7 +33,6 @@
     ../../home/system/hyprpaper
     ../../home/system/wofi
     ../../home/system/batsignal
-    ../../home/system/zathura
     ../../home/system/mime
     ../../home/system/udiskie
     ../../home/system/clipman
