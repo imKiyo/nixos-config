@@ -18,26 +18,23 @@ in {
       theme = "sddm-astronaut-theme";
       settings = {
         Wayland.SessionDir = "${
-          inputs.hyprland.packages."${pkgs.system}".hyprland
-        }/share/wayland-sessions";
-      };
-      # Add the autoLogin options here:
-      autoLogin = {
-        enable = true;
-        user = "kiyo"; # Replace with your actual username
-        session = "hyprland"; # or whatever session you use
+            inputs.hyprland.packages."${pkgs.system}".hyprland
+          }/share/wayland-sessions";
+        
+        # Add these lines for auto-login
+        Autologin = {
+          User = "kiyo";  # Replace with your actual username
+          Session = "hyprland.desktop";
+        };
       };
     };
   };
-
   services.getty = {
     autologinUser = null;
     helpLine = lib.mkForce "";
   };
   systemd.services."getty@tty1".enable = false;
-
   environment.systemPackages = [ sddm-astronaut ];
-
   # To prevent getting stuck at shutdown
   systemd.extraConfig = "DefaultTimeoutStopSec=10s";
 }
