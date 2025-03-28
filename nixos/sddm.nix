@@ -24,7 +24,7 @@ in {
       # Add the autoLogin options here:
       autoLogin = {
         enable = true;
-        user = "your_username"; # Replace with your actual username
+        user = "kiyo"; # Replace with your actual username
         session = "hyprland"; # or whatever session you use
       };
     };
