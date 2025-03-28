@@ -18,8 +18,14 @@ in {
       theme = "sddm-astronaut-theme";
       settings = {
         Wayland.SessionDir = "${
-            inputs.hyprland.packages."${pkgs.system}".hyprland
-          }/share/wayland-sessions";
+          inputs.hyprland.packages."${pkgs.system}".hyprland
+        }/share/wayland-sessions";
+      };
+      # Add the autoLogin options here:
+      autoLogin = {
+        enable = true;
+        user = "your_username"; # Replace with your actual username
+        session = "hyprland"; # or whatever session you use
       };
     };
   };
