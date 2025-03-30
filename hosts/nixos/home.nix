@@ -87,8 +87,6 @@
       # Testing apps
     ];
 
-    activation.checkLinkTargets = false;
-
     # Import my profile picture, used by the hyprpanel dashboard
     file.".face.icon" = { source = ./profile_picture.png; };
 
