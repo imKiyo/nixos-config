@@ -1,25 +1,25 @@
 { config, lib, ... }: {
   imports = [
     # Choose your theme here:
-    ../../themes/nixy.nix
+    ../../themes/kiyo.nix
   ];
 
   config.var = {
-    hostname = "jack";
-    username = "hadi";
+    hostname = "nixos";
+    username = "kiyo";
     configDirectory = "/home/" + config.var.username
       + "/.config/nixos"; # The path of the nixos configuration directory
 
-    keyboardLayout = "fr";
+    keyboardLayout = "us";
 
-    location = "Paris";
-    timeZone = "Europe/Paris";
+    location = "Warsaw";
+    timeZone = "Europe/Warsaw";
     defaultLocale = "en_US.UTF-8";
-    extraLocale = "fr_FR.UTF-8";
+    extraLocale = "pl_PL.UTF-8";
 
     git = {
-      username = "Hadi";
-      email = "112569860+anotherhadi@users.noreply.github.com";
+      username = "imKiyo";
+      email = "xargon11@gmail.com";
     };
 
     autoUpgrade = false;

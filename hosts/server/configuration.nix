@@ -22,7 +22,7 @@
     ./hardware-configuration.nix
     ./variables.nix
 
-    ./secrets
+    #./secrets
   ];
 
   home-manager.users."${config.var.username}" = import ./home.nix;
