@@ -2,7 +2,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    backupFileExtension = "hm-backup";
+    backupFileExtension = "nixos-backup";
     extraSpecialArgs = { inherit inputs; };
   };
 }
