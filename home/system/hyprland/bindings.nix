@@ -1,20 +1,20 @@
 { pkgs, ... }: {
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "$mod,RETURN, exec, ${pkgs.kitty}/bin/kitty" # Kitty
+      "$mod,T, exec, ${pkgs.kitty}/bin/kitty" # Kitty
       "$mod,E, exec, ${pkgs.xfce.thunar}/bin/thunar" # Thunar
-      "$mod,B, exec, zen" # Zen Browser
+      "$mod,F, exec, zen" # Zen Browser
       "$mod,K, exec, ${pkgs.bitwarden}/bin/bitwarden" # Bitwarden
       "$mod,L, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock
       "$mod,X, exec, powermenu" # Powermenu
-      "$mod,SPACE, exec, menu" # Launcher
+      "$mod,A, exec, menu" # Launcher
       "$mod,C, exec, quickmenu" # Quickmenu
       "$shiftMod,SPACE, exec, hyprfocus-toggle" # Toggle HyprFocus
       "$mod,P, exec, ${pkgs.planify}/bin/io.github.alainm23.planify" # Planify
 
       "$mod,Q, killactive," # Close window
-      "$mod,T, togglefloating," # Toggle Floating
-      "$mod,F, fullscreen" # Toggle Fullscreen
+      "$mod,W, togglefloating," # Toggle Floating
+      "$mod,SPACE, fullscreen" # Toggle Fullscreen
       "$mod,left, movefocus, l" # Move focus left
       "$mod,right, movefocus, r" # Move focus Right
       "$mod,up, movefocus, u" # Move focus Up
@@ -30,7 +30,7 @@
       "ALT,PRINT, exec, screenshot region swappy" # Screenshot region then edit
 
       "$shiftMod,T, exec, hyprpanel-toggle" # Toggle hyprpanel
-      "$shiftMod,C, exec, clipboard" # Clipboard picker with wofi
+      "$shiftMod,V, exec, clipboard" # Clipboard picker with wofi
       "$shiftMod,E, exec, ${pkgs.wofi-emoji}/bin/wofi-emoji" # Emoji picker with wofi
       "$mod,F2, exec, night-shift" # Toggle night shift
       "$mod,F3, exec, night-shift" # Toggle night shift
@@ -51,7 +51,7 @@
       ",XF86AudioPlay, exec, ${pkgs.playerctl}/bin/playerctl play-pause" # Play/Pause Song
       ",XF86AudioNext, exec, ${pkgs.playerctl}/bin/playerctl next" # Next Song
       ",XF86AudioPrev, exec, ${pkgs.playerctl}/bin/playerctl previous" # Previous Song
-      ",switch:Lid Switch, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock when closing Lid
+      #",switch:Lid Switch, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock when closing Lid
     ];
 
     bindle = [
