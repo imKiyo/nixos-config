@@ -92,7 +92,7 @@ in {
         gaps_in = gaps-in;
         gaps_out = gaps-out;
         border_size = border-size;
-        layout = "master";
+        layout = "dwindle";
       };
 
       decoration = {
@@ -108,6 +108,15 @@ in {
           enabled = if blur then "true" else "false";
           size = 18;
         };
+      };
+      
+      dwindle = {
+        force_split = 2;
+        special_scale_factor = 1.0;
+        split_width_multiplier = 1.0;
+        use_active_for_splits = true;
+        pseudotile = "yes";
+        preserve_split = "yes";
       };
 
       master = {
