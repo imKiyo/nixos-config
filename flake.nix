@@ -36,9 +36,9 @@
       url = "github:KZDKM/Hyprspace";
       inputs.hyprland.follows = "hyprland";
     };
-    ghostty = {
-      url = "github:ghostty-org/ghostty";
-    };
+    #ghostty = {
+    #  url = "github:ghostty-org/ghostty";
+    #};
   };
 
   outputs = inputs@{ nixpkgs, ... }: {
