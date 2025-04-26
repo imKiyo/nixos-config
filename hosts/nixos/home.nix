@@ -85,6 +85,9 @@
       vscode
 
       # Testing apps
+      wine
+      winetricks
+      lutris
     ];
 
     # Import my profile picture, used by the hyprpanel dashboard

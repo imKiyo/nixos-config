@@ -41,7 +41,6 @@ in {
     enable = true;
     xwayland.enable = true;
     systemd.enable = true;
-    # withUWSM = true; # One day, but not today
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
     settings = {
@@ -51,8 +50,16 @@ in {
       exec-once = [ "dbus-update-activation-environment --systemd --all" ];
 
       monitor = [
-        "HDMI-A-3,1920x1080@60,auto,1"
-        "DVI-I-1,1680x1050@60,auto,1,transform,1"
+        "HDMI-A-3,1920x1080@60,0x0,1"
+        "DVI-I-1,1680x1050@60,-1050x0,1,transform,1"
+        #"HDMI-A-3,1920x1080@60,auto,1"
+        #"DVI-I-1,1680x1050@60,auto,1,transform,1"
+      ];
+
+      workspace = [ 
+        "HDMI-A-3,1"
+        #dvi still is assigned to 1 and also acts as the main display
+        "DVI-I-1,6"
       ];
 
       env = [
