@@ -73,6 +73,7 @@
       btop
       fastfetch
       tree
+      flatpak
 
       # Just cool
       #peaclock

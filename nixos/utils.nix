@@ -83,6 +83,7 @@ in {
     wget
     curl
     #vim
+    vintagestory
   ];
 
   services.logind.extraConfig = ''
