@@ -102,6 +102,9 @@ in {
 
       gaa = "git add .";
       gcm = "git commit -m";
+
+      # games
+      vintagestory = "flatpak run at.vintagestory.VintageStory";
     };
   };
 }
