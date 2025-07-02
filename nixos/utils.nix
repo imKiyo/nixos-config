@@ -43,9 +43,9 @@ in {
     };
     gnome.gnome-keyring.enable = true;
 
-    virtualisation = {
-      waydroid.enable = true; 
-    };
+    #virtualisation = {
+    #  waydroid.enable = true; 
+    #};
 
     dbus.enable = true;
     gvfs.enable = true;
@@ -89,8 +89,9 @@ in {
     curl
     #vim
     #vintagestory
-    waydroid-helper
-    wl-clipboard
+    #waydroid-helper
+    #wl-clipboard
+    rmpc
   ];
 
   services.logind.extraConfig = ''
