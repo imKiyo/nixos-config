@@ -42,8 +42,17 @@ in {
     };
     gnome.gnome-keyring.enable = true;
 
-    virtualisation.waydroid.enable = true; # Enables Waydroid service and kernel modules
+    virtualisation = {
+      waydroid.enable = true; 
+    };
+
+    dbus.enable = true;
+    gvfs.enable = true;
+    upower.enable = true;
+    power-profiles-daemon.enable = true;
+    udisks2.enable = true;
   };
+
   console.keyMap = keyboardLayout;
 
   environment.variables = {
@@ -57,13 +66,6 @@ in {
 
   services.libinput.enable = true;
   programs.dconf.enable = true;
-  services = {
-    dbus.enable = true;
-    gvfs.enable = true;
-    upower.enable = true;
-    power-profiles-daemon.enable = true;
-    udisks2.enable = true;
-  };
 
   # Faster rebuilding
   documentation = {
@@ -86,7 +88,7 @@ in {
     curl
     #vim
     #vintagestory
-    waydroid-helper # The helper utility you searched for
+    waydroid-helper
     wl-clipboard
   ];
 
