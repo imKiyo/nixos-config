@@ -88,7 +88,7 @@
   ];
 
   # Make 'mpc' client available system-wide (good for quick updates from terminal)
-  environment.systemPackages = with pkgs; [ mpc ];
+  #environment.systemPackages = with pkgs; [ mpc ];
 
   # Note: You don't need to add rmpc here. rmpc is a user program and is already
   # handled by your home-manager configuration, which is correctly imported

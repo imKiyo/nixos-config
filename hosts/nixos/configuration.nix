@@ -15,6 +15,7 @@
     # ../../nixos/docker.nix
     ../../nixos/tailscale.nix
     ../../nixos/steam.nix
+    ../../home/system/mpd
 
     # You should let those lines as is
     ./hardware-configuration.nix

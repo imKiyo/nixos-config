@@ -66,7 +66,7 @@ in {
   };
 
   services.libinput.enable = true;
-  services.mpd.enable = true;
+  #services.mpd.enable = true;
   programs.dconf.enable = true;
 
   # Faster rebuilding
