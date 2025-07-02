@@ -1,4 +1,3 @@
-# /home/kiyo/.config/nixos/home/programs/rmpc.nix
 { config, pkgs, ... }:
 
 {
