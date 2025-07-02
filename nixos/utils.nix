@@ -4,9 +4,6 @@ let
   keyboardLayout = config.var.keyboardLayout;
   configDir = config.var.configDirectory;
 in {
-  imports = [
-    pkgs.nixos.modules.virtualisation.waydroid
-  ];
 
   networking.hostName = hostname;
 
