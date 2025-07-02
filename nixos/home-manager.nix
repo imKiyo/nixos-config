@@ -3,7 +3,7 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     # change the name of the backup if ur home manager fails again
-    backupFileExtension = "backup7";
+    backupFileExtension = "backup8";
     extraSpecialArgs = { inherit inputs; };
   };
 }
