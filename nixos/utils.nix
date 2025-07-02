@@ -41,6 +41,8 @@ in {
       xkb.variant = "";
     };
     gnome.gnome-keyring.enable = true;
+
+    virtualisation.waydroid.enable = true; # Enables Waydroid service and kernel modules
   };
   console.keyMap = keyboardLayout;
 
@@ -84,6 +86,8 @@ in {
     curl
     #vim
     #vintagestory
+    waydroid-helper # The helper utility you searched for
+    wl-clipboard
   ];
 
   services.logind.extraConfig = ''
