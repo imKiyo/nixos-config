@@ -21,6 +21,7 @@
     #../../home/programs/ghostty
     ../../home/programs/nvf # neovim but more autistic
     ../../home/programs/yazi
+    ../../home/programs/rmpc
 
     # Scripts
     ../../home/scripts # All scripts

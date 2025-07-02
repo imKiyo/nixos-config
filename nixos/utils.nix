@@ -92,6 +92,7 @@ in {
     #waydroid-helper
     #wl-clipboard
     rmpc
+    mpd
   ];
 
   services.logind.extraConfig = ''
