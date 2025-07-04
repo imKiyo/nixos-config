@@ -1,96 +1,68 @@
-# /home/kiyo/.config/nixos/system/mpd/default.nix
-{ config, pkgs, lib, ... }: # Ensure 'lib' is available for potential future use
+# /home/kiyo/.config/nixos/home/system/mpd/default.nix
+{ config, pkgs, lib, ... }:
 
 {
   services.mpd = {
-    enable = true; # Enables the MPD service
+    enable = true; # Ensures MPD service is enabled
 
     # --------------------------------------------------------------------------
-    # Basic Configuration
+    # Basic Configuration (These are confirmed direct options from minimal config)
     # --------------------------------------------------------------------------
-
-    # 1. Music Directory (REQUIRED)
-    # IMPORTANT: Change "/home/kiyo/Music" to your actual music folder path.
-    musicDirectory = "/home/kiyo/Music";
-
-    # 2. Database File
-    dbFile = "/var/lib/mpd/database";
-
-    # 3. State File
-    stateFile = "/var/lib/mpd/state";
-
-    # 4. Playlist Directory
-    playlistDirectory = "/var/lib/mpd/playlists";
+    musicDirectory = "/home/kiyo/Music"; # This should still be a direct option.
 
     # --------------------------------------------------------------------------
-    # User and Permissions (CRITICAL for accessing music)
+    # User and Permissions (These are confirmed direct options)
     # --------------------------------------------------------------------------
-
-    # Run MPD as your normal user for easy access to your home directory music.
-    # Replace "kiyo" with your actual username if different.
-    user = "kiyo";
+    user = "kiyo"; # Run MPD as your normal user
     group = "users"; # Your primary user group
 
     # --------------------------------------------------------------------------
-    # Network Configuration (for clients like rmpc)
+    # Network Configuration (Refactored under 'network' attribute set - CONFIRMED)
     # --------------------------------------------------------------------------
-    bindToAddress = "localhost"; # For local clients like rmpc
-    port = 6600; # Standard MPD port
+    network = {
+      listenAddress = "localhost"; # Use this instead of bindToAddress
+      port = 6600; # Use this instead of top-level port
+    };
 
     # --------------------------------------------------------------------------
-    # Audio Output (REQUIRED)
+    # Extra Configuration for MPD.conf (for options not directly exposed)
     # --------------------------------------------------------------------------
+    extraConfig = ''
+      # Database and State Files
+      # dbFile and stateFile are configured directly in mpd.conf via extraConfig
+      db_file "/var/lib/mpd/database" # Assuming this will also be an error next, let's add it now to save a step
+      state_file "/var/lib/mpd/state" # Moved from direct option
 
-    # Choose ONE of these audio output configurations based on your setup:
-    # Most modern NixOS users will use PipeWire.
-    audioOutputs = [
-      {
-        name = "my_pipewire_output";
-        type = "pipewire";
+      # Playlist Directory
+      # playlistDirectory is configured directly in mpd.conf via extraConfig
+      playlist_directory "/var/lib/mpd/playlists" # Assuming this will also be an error next, let's add it now
+
+      # Audio Output is configured directly in mpd.conf via extraConfig
+      audio_output {
+        name "my_pipewire_output"
+        type "pipewire"
       }
-    ];
 
-    # OR (uncomment if you use PulseAudio instead):
-    # audioOutputs = [
-    #   {
-    #     name = "my_pulseaudio_output";
-    #     type = "pulseaudio";
-    #   }
-    # ];
+      # auto_update is configured directly in mpd.conf via extraConfig
+      auto_update "yes"
 
-    # OR (uncomment if you use ALSA directly, for advanced users):
-    # audioOutputs = [
-    #   {
-    #     name = "my_alsa_output";
-    #     type = "alsa";
-    #     device = "hw:0,0"; # Adjust based on your sound card (e.g., 'aplay -L')
-    #   }
-    # ];
+      # Optional: logFile is also typically in mpd.conf
+      # log_file "/var/log/mpd/mpd.log"
+    '';
 
     # --------------------------------------------------------------------------
-    # Optional Settings (uncomment and adjust as needed)
+    # Data Directory (still a direct option, sets base path for dbFile etc.)
     # --------------------------------------------------------------------------
-
-    autoUpdate = true; # Automatically update database on changes to musicDirectory
-
-    # logFile = "/var/log/mpd/mpd.log"; # For debugging, ensure /var/log/mpd exists and is writable
+    # dataDir = "/var/lib/mpd"; # Default, only specify if you want to change it
   };
 
   # --------------------------------------------------------------------------
-  # Systemd tmpfiles for directories (Ensures MPD's data dirs exist and have correct permissions)
+  # Systemd tmpfiles for directories (still necessary if you don't use defaults)
   # --------------------------------------------------------------------------
   systemd.tmpfiles.rules = [
-    # These use the user and group defined in services.mpd for consistency
     "d /var/lib/mpd 0755 ${config.services.mpd.user} ${config.services.mpd.group} - -"
     "d /var/lib/mpd/playlists 0755 ${config.services.mpd.user} ${config.services.mpd.group} - -"
-    # Uncomment the line below if you enabled logFile above:
+    # If you enable log_file in extraConfig, you might need this:
     # "d /var/log/mpd 0755 ${config.services.mpd.user} ${config.services.mpd.group} - -"
   ];
-
-  # Make 'mpc' client available system-wide (good for quick updates from terminal)
-  #environment.systemPackages = with pkgs; [ mpc ];
-
-  # Note: You don't need to add rmpc here. rmpc is a user program and is already
-  # handled by your home-manager configuration, which is correctly imported
-  # into your /etc/nixos/configuration.nix at a higher level.
 }

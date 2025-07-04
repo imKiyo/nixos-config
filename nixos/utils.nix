@@ -92,8 +92,8 @@ in {
     #vintagestory
     #waydroid-helper
     #wl-clipboard
-    rmpc
-    mpd
+    #rmpc
+    #mpd
   ];
 
   services.logind.extraConfig = ''

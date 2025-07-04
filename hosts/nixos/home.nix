@@ -16,7 +16,7 @@
     ../../home/programs/lazygit
     ../../home/programs/zen
     ../../home/programs/duckduckgo-colorscheme
-    ../../home/programs/discord
+    #../../home/programs/discord
     ../../home/programs/tailscale
     #../../home/programs/ghostty
     ../../home/programs/nvf # neovim but more autistic
@@ -33,6 +33,7 @@
     ../../home/system/hyprpanel
     ../../home/system/hyprpaper
     ../../home/system/wofi
+    #../../home/system/rofi
     ../../home/system/batsignal
     ../../home/system/mime
     ../../home/system/udiskie
@@ -91,6 +92,7 @@
       wine
       winetricks
       lutris
+      rofi
     ];
 
     # Import my profile picture, used by the hyprpanel dashboard

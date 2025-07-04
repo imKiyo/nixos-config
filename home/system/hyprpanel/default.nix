@@ -25,19 +25,22 @@ let
   location = config.var.location;
 in {
 
-  imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
+  # Make sure you have REMOVED inputs.hyprpanel from your flake.nix
+  # and also the 'imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];' line
+  # from THIS file.
 
   programs.hyprpanel = {
     enable = true;
-    hyprland.enable = true;
-    overwrite.enable = true;
-    overlay.enable = true;
-    layout = {
-      "bar.layouts" = {
+
+    # ALL HYPRPANEL-SPECIFIC CONFIGURATION NOW GOES INTO THE 'settings' ATTRIBUTE SET.
+    # The structure within 'settings' should mirror hyprpanel's internal config format (e.g., TOML/JSON).
+    settings = {
+      # The 'layout' section you had
+      bar.layouts = {
         "*" = {
-          "left" = [ "dashboard" "workspaces" "windowtitle" ];
-          "middle" = [ "clock" ];
-          "right" = [
+          left = [ "dashboard" "workspaces" "windowtitle" ];
+          middle = [ "clock" ];
+          right = [
             "media"
             "systray"
             "volume"
@@ -45,9 +48,8 @@ in {
           ];
         };
       };
-    };
 
-    override = {
+      # The 'override' section you had
       "theme.font.name" = "${font}";
       "theme.font.size" = "${fontSize}px";
       "theme.bar.outer_spacing" =
