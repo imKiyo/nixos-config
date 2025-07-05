@@ -10,7 +10,7 @@
     ../../home/programs/shell
     ../../home/programs/fetch
     ../../home/programs/git
-    ../../home/programs/spicetify
+    #../../home/programs/spicetify
     ../../home/programs/nextcloud
     ../../home/programs/thunar
     ../../home/programs/lazygit
@@ -39,6 +39,7 @@
     ../../home/system/udiskie
     ../../home/system/clipman
     #../../home/system/mpd
+    #../../home/system/quickshell
 
     #./secrets # CHANGEME: You should probably remove this line, this is where I store my secrets
   ];
@@ -62,7 +63,7 @@
       # Dev
       go
       nodejs
-      python3
+      #python3
       jq
       just
       pnpm
@@ -93,6 +94,23 @@
       winetricks
       lutris
       rofi
+
+      quickshell
+      #inputs.quickshell.packages.x86_64-linux.default
+      fish
+      jq
+      fd
+      (pkgs.python3.withPackages (python-pkgs: with python-pkgs; [
+        aubio
+        pyaudio
+        numpy
+      ]))
+      cava
+      bluez
+      ddcutil
+      brightnessctl
+      curl
+      material-symbols
     ];
 
     # Import my profile picture, used by the hyprpanel dashboard
