@@ -1,4 +1,4 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, inputs, ... }: {
 
   imports = [
     # Mostly user-specific configuration
@@ -16,7 +16,7 @@
     ../../home/programs/lazygit
     ../../home/programs/zen
     ../../home/programs/duckduckgo-colorscheme
-    #../../home/programs/discord
+    ../../home/programs/discord
     ../../home/programs/tailscale
     #../../home/programs/ghostty
     ../../home/programs/nvf # neovim but more autistic
@@ -95,8 +95,8 @@
       lutris
       rofi
 
-      quickshell
-      #inputs.quickshell.packages.x86_64-linux.default
+      #quickshell
+      inputs.quickshell.packages.x86_64-linux.default
       fish
       jq
       fd

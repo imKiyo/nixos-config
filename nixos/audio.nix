@@ -10,11 +10,11 @@
     jack.enable = true;
     wireplumber = {
       enable = true;
-      extraConfig = {
+/*       extraConfig = {
         "10-disable-camera" = {
           "wireplumber.profiles" = { main."monitor.libcamera" = "disabled"; };
         };
-      };
+      }; */
     };
   };
 }

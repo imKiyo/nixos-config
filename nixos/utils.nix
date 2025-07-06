@@ -81,6 +81,8 @@ in {
 
   environment.systemPackages = with pkgs; [
     hyprland-qtutils
+    xdg-desktop-portal-hyprland
+    xdg-desktop-portal-gtk
     fd
     bc
     gcc

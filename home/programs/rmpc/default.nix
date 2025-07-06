@@ -4,6 +4,7 @@
   # Ensure rmpc package is installed for your user
   home.packages = with pkgs; [
     rmpc
+    #mpd
   ];
 
   # Define the content of ~/.config/rmpc/config.ron
