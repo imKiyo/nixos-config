@@ -1,23 +1,28 @@
+# /home/kiyo/.config/nixos/home/system/mpd/default.nix
 { config, pkgs, lib, ... }:
 
+let
+  # Define dataDir here to make it accessible to other options within programs.mpd
+  mpdDataDir = "${config.home.homeDirectory}/.local/share/mpd";
+in
 {
   programs.mpd = {
     enable = true;
-    package = pkgs.mpd; # Explicitly define the MPD package
+    package = pkgs.mpd;
 
-    musicDirectory = "$HOME/Music";
+    musicDirectory = "${config.home.homeDirectory}/Music";
 
-    dataDir = "$HOME/.local/share/mpd";
+    dataDir = mpdDataDir; # Use the defined variable
 
-    dbFile = "$HOME/database";
-    stateFile = "$HOME/state";
-    playlistDirectory = "$HOME/playlists";
-    stickerFile = "$HOME/sticker.db";
+    # Now, reference mpdDataDir instead of config.programs.mpd.dataDir
+    dbFile = "${mpdDataDir}/database";
+    stateFile = "${mpdDataDir}/state";
+    playlistDirectory = "${mpdDataDir}/playlists";
+    stickerFile = "${mpdDataDir}/sticker.db";
 
-    # This assumes config.home.uid is correctly populated by Home Manager.
-    pidFile = "/run/user/.local/share/mpd/mpd.pid";
+    pidFile = "/run/user/${toString config.home.uid}/mpd/mpd.pid";
 
-    logFile = "$HOME/mpd.log";
+    logFile = "${mpdDataDir}/mpd.log"; # Use mpdDataDir
 
     bindToAddress = "localhost";
     port = 6600;

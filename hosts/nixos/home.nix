@@ -10,15 +10,13 @@
     ../../home/programs/shell
     ../../home/programs/fetch
     ../../home/programs/git
-    #../../home/programs/spicetify
-    ../../home/programs/nextcloud
-    ../../home/programs/thunar
-    ../../home/programs/lazygit
+    #../../home/programs/nextcloud
+    ../../home/programs/thunar # file manager
+    ../../home/programs/lazygit 
     ../../home/programs/zen
     ../../home/programs/duckduckgo-colorscheme
     ../../home/programs/discord
     ../../home/programs/tailscale
-    #../../home/programs/ghostty
     ../../home/programs/nvf # neovim but more autistic
     ../../home/programs/yazi
     ../../home/programs/rmpc
@@ -34,14 +32,14 @@
     ../../home/system/hyprpaper
     ../../home/system/wofi
     #../../home/system/rofi
-    ../../home/system/batsignal
-    ../../home/system/mime
+    #../../home/system/batsignal
+    ../../home/system/mime # lets you chose which app should run said files
     ../../home/system/udiskie
     ../../home/system/clipman
     #../../home/system/mpd
     #../../home/system/quickshell
 
-    #./secrets # CHANGEME: You should probably remove this line, this is where I store my secrets
+    #./secrets
   ];
 
   home = {
@@ -50,7 +48,7 @@
 
     packages = with pkgs; [
       # Apps
-      bitwarden # Password manager
+      #bitwarden # Password manager
       vlc # Video player
       blanket # White-noise app
       obsidian # Note taking app
@@ -58,7 +56,7 @@
       gnome-calendar # Calendar
       textpieces # Manipulate texts
       curtail # Compress images
-      resources
+      resources # btop like but with gui
 
       # Dev
       go
@@ -68,34 +66,31 @@
       just
       pnpm
 
-      # Utils
+      # Unpacking
       zip
       unzip
       unrar
-      optipng
+
+      # Utils
+      optipng # PNG optimizer that recompresses image files to a smaller size
       pfetch
       btop
       fastfetch
       tree
       flatpak
 
-      # Just cool
-      #peaclock
-      #cbonsai
-      #pipes
-      #cmatrix
-
-      # Backup
-      firefox
+      # Forbidden tools i sweared to eventually drop lol
       vscode
 
-      # Testing apps
+      # Gaming
       wine
       winetricks
       lutris
       rofi
 
-      #quickshell
+      #Testing apps
+
+      # Quickshell setup in progress
       inputs.quickshell.packages.x86_64-linux.default
       fish
       jq

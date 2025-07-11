@@ -43,10 +43,6 @@ in {
     };
     gnome.gnome-keyring.enable = true;
 
-    #virtualisation = {
-    #  waydroid.enable = true; 
-    #};
-
     dbus.enable = true;
     gvfs.enable = true;
     upower.enable = true;
@@ -66,7 +62,6 @@ in {
   };
 
   services.libinput.enable = true;
-  #services.mpd.enable = true;
   programs.dconf.enable = true;
 
   # Faster rebuilding
@@ -90,12 +85,9 @@ in {
     xdg-utils
     wget
     curl
-    #vim
-    #vintagestory
-    #waydroid-helper
-    #wl-clipboard
     #rmpc
     #mpd
+    retroarchFull
   ];
 
   services.logind.extraConfig = ''

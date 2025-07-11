@@ -23,7 +23,7 @@ in {
         
         # Add these lines for auto-login
         Autologin = {
-          User = "kiyo";  # Replace with your actual username
+          User = "kiyo";
           Session = "hyprland.desktop";
         };
       };
