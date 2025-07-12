@@ -11,6 +11,7 @@
       "$mod,C, exec, quickmenu" # Quickmenu
       "$shiftMod,SPACE, exec, hyprfocus-toggle" # Toggle HyprFocus
       "$mod,P, exec, ${pkgs.planify}/bin/io.github.alainm23.planify" # Planify
+      "$mod,L, exec, ~/.config/hypr/scripts/autoclick.sh"
 
       "$mod,Q, killactive," # Close window
       "$mod,W, togglefloating," # Toggle Floating

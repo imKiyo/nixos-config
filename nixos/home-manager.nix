@@ -2,8 +2,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    # change the name of the backup if ur home manager fails again
-    backupFileExtension = "backup15";
+    backupFileExtension = "backup-$(date +%Y%m%d-%H%M%S)";
     extraSpecialArgs = { inherit inputs; };
   };
 }
