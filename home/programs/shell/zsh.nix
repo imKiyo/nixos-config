@@ -99,9 +99,11 @@ in {
       gbr = "git branch";
       grs = "git reset HEAD~1";
       grh = "git reset --hard HEAD~1";
-
       gaa = "git add .";
       gcm = "git commit -m";
+
+      godot = "steam-run ~/Downloads/GODOT/Godot_v4.4.1-stable_linux.x86_64";
+      osrs = "flatpak run --user com.jagex.Launcher";
 
       # games
       vintagestory = "flatpak run at.vintagestory.VintageStory";
