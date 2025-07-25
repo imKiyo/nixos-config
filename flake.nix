@@ -14,6 +14,7 @@
     sops-nix.url = "github:Mic92/sops-nix";
     nixarr.url = "github:rasmus-kirk/nixarr";
     nix-gaming.url = "github:fufexan/nix-gaming";
+    nixpkgs-wayland.url = "github:nix-community/nixpkgs-wayland";
     quickshell = {
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
