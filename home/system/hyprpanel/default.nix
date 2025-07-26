@@ -73,7 +73,7 @@ in {
         "${if position == "top" then "0" else toString (gaps-in * 2)}px";
       "theme.bar.margin_sides" = "${toString gaps-out}px";
       "theme.bar.border_radius" = "${toString rounding}px";
-      "bar.launcher.icon" = "";
+      "bar.launcher.icon" = " PENIS";
       "theme.bar.transparent" = "${if transparent then "true" else "false"}";
       "bar.workspaces.show_numbered" = false;
       "bar.workspaces.workspaces" = 5;

@@ -41,12 +41,16 @@ in {
     CLUTTER_BACKEND = "wayland";
     WLR_DRM_DEVICES = "/dev/dri/card1:/dev/dri/card0";
   };
-    loginShellInit = ''
-      dbus-update-activation-environment --systemd DISPLAY
-      eval $(ssh-agent)
-      eval $(gnome-keyring-daemon --start)
-      export GPG_TTY=$TTY
-    '';
+  # --- MOVE THIS BLOCK ---
+  # Remove loginShellInit from here
+  # loginShellInit = ''
+  #   dbus-update-activation-environment --systemd DISPLAY
+  #   eval $(ssh-agent)
+  #   eval $(gnome-keyring-daemon --start)
+  #   export GPG_TTY=$TTY
+  # '';
+  # --- END MOVE ---
+
   # xdg portal is required for screenshare
   xdg.portal = {
     enable = true;
