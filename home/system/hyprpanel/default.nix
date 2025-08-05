@@ -25,17 +25,12 @@ let
   location = config.var.location;
 in {
 
-  # Make sure you have REMOVED inputs.hyprpanel from your flake.nix
-  # and also the 'imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];' line
-  # from THIS file.
-
   programs.hyprpanel = {
     enable = true;
 
     # ALL HYPRPANEL-SPECIFIC CONFIGURATION NOW GOES INTO THE 'settings' ATTRIBUTE SET.
     # The structure within 'settings' should mirror hyprpanel's internal config format (e.g., TOML/JSON).
     settings = {
-      # The 'layout' section you had
       bar.layouts = {
         "*" = {
           left = [ "dashboard" "workspaces" "windowtitle" ];
@@ -49,7 +44,6 @@ in {
         };
       };
 
-      # The 'override' section you had
       "theme.font.name" = "${font}";
       "theme.font.size" = "${fontSize}px";
       "theme.bar.outer_spacing" =
@@ -73,7 +67,7 @@ in {
         "${if position == "top" then "0" else toString (gaps-in * 2)}px";
       "theme.bar.margin_sides" = "${toString gaps-out}px";
       "theme.bar.border_radius" = "${toString rounding}px";
-      "bar.launcher.icon" = " PENIS";
+      "bar.launcher.icon" = "";
       "theme.bar.transparent" = "${if transparent then "true" else "false"}";
       "bar.workspaces.show_numbered" = false;
       "bar.workspaces.workspaces" = 5;

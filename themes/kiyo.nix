@@ -6,8 +6,8 @@
       rounding = 10;
       gaps-in = 1;
       gaps-out = 1;
-      active-opacity = 0.96;
-      inactive-opacity = 0.95;
+      active-opacity = 0.90;
+      inactive-opacity = 0.85;
       blur = true;
       border-size = 2;
       animation-speed = "fast"; # "fast" | "medium" | "slow"
@@ -15,8 +15,8 @@
 
       bar = { # Hyprpanel
         position = "top"; # "top" | "bottom"
-        transparent = false;
-        transparentButtons = false;
+        transparent = true;
+        transparentButtons = true;
         floating = false;
       };
     };
@@ -29,22 +29,22 @@
 
       # See https://tinted-theming.github.io/tinted-gallery/ for more schemes
       base16Scheme = {
-        base00 = "#231e18"; # Default Background
-        base01 = "#302b25"; # Lighter Background (Used for status bars, line number and folding marks)
-        base02 = "#48413a"; # Selection Background
-        base03 = "#9d8b70"; # Comments, Invisibles, Line Highlighting
-        base04 = "#b4a490"; # Dark Foreground (Used for status bars)
-        base05 = "#cabcb1"; # Default Foreground, Caret, Delimiters, Operators
-        base06 = "#d7c8bc"; # Light Foreground (Not often used)
-        base07 = "#e4d4c8"; # Light Background (Not often used)
-        base08 = "#d35c5c"; # Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
-        base09 = "#ca7f32"; # Integers, Boolean, Constants, XML Attributes, Markup Link Url
-        base0A = "#e0ac16"; # Classes, Markup Bold, Search Text Background
-        base0B = "#b7ba53"; # Strings, Inherited Class, Markup Code, Diff Inserted
-        base0C = "#6eb958"; # Support, Regular Expressions, Escape Characters, Markup Quotes
-        base0D = "#b4a490"; # Functions, Methods, Attribute IDs, Headings, Accent color
-        base0E = "#bb90e2"; # Keywords, Storage, Selector, Markup Italic, Diff Changed
-        base0F = "#b49368"; # Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
+        base00 = "#120f09"; # Default Background
+        base01 = "#1e1812"; # Lighter Background (Used for status bars, line number and folding marks)
+        base02 = "#35291d"; # Selection Background
+        base03 = "#66553f"; # Comments, Invisibles, Line Highlighting
+        base04 = "#a28662"; # Dark Foreground (Used for status bars)
+        base05 = "#c0a179"; # Default Foreground, Caret, Delimiters, Operators
+        base06 = "#d6b891"; # Light Foreground (Not often used)
+        base07 = "#292016"; # Light Background (Not often used)
+        base08 = "#887254"; # Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
+        base09 = "#d6b891"; # Integers, Boolean, Constants, XML Attributes, Markup Link Url
+        base0A = "#c0a179"; # Classes, Markup Bold, Search Text Background
+        base0B = "#927a60"; # Strings, Inherited Class, Markup Code, Diff Inserted
+        base0C = "#a28662"; # Support, Regular Expressions, Escape Characters, Markup Quotes
+        base0D = "#d6b891"; # Functions, Methods, Attribute IDs, Headings, Accent color
+        base0E = "#a28662"; # Keywords, Storage, Selector, Markup Italic, Diff Changed
+        base0F = "#887254"; # Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
       };
 
       cursor = {
