@@ -23,6 +23,8 @@ in {
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
       color.ui = "1";
+      credential.helper = "libsecret";
+      core.sshCommand = "ssh -i /home/kiyo/.ssh/id_ed25519";
     };
     aliases = {
       essa = "push --force";

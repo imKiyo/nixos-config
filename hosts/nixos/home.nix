@@ -39,7 +39,7 @@
     #../../home/system/mpd
     #../../home/system/quickshell
 
-    #./secrets
+    
   ];
 
   home = {
@@ -73,6 +73,7 @@
 
       # Utils
       optipng # PNG optimizer that recompresses image files to a smaller size
+      libsecret # For git credential store
       pfetch
       btop
       fastfetch
@@ -109,6 +110,7 @@
       brightnessctl
       curl
       material-symbols
+      scanmem # Its like a Cheat Engine but in a terminal
     ];
 
     # Import my profile picture, used by the hyprpanel dashboard
@@ -116,7 +118,10 @@
 
     # Don't touch this
     stateVersion = "24.05";
+
+    
   };
 
   programs.home-manager.enable = true;
+  
 }

@@ -3,34 +3,15 @@
   imports = [ inputs.sops-nix.homeManagerModules.sops ];
 
   sops = {
-    age.keyFile = "/home/hadi/.config/sops/age/keys.txt";
+    age.keyFile = "/home/kiyo/.config/sops/age/keys.txt";
     defaultSopsFile = ./secrets.yaml;
     secrets = {
-      sshconfig = { path = "/home/hadi/.ssh/config"; };
-      github-key = { path = "/home/hadi/.ssh/github"; };
-      gitlab-key = { path = "/home/hadi/.ssh/gitlab"; };
-      jack-key = { path = "/home/hadi/.ssh/jack"; };
-      pia = { path = "/home/hadi/.config/pia/pia.ovpn"; };
+      git_ssh_key = {
+        path = "/home/kiyo/.ssh/id_ed25519";
+        mode = "0600";
+      };
     };
   };
 
-  home.file.".config/nixos/.sops.yaml".text = ''
-    keys:
-      - &primary age12yvtj49pfh3fqzqflscm0ek4yzrjhr6cqhn7x89gdxnlykq0xudq5c7334
-    creation_rules:
-      - path_regex: hosts/laptop/secrets/secrets.yaml$
-        key_groups:
-          - age:
-            - *primary
-      - path_regex: hosts/server/secrets/secrets.yaml$
-        key_groups:
-          - age:
-            - *primary
-  '';
-
-  systemd.user.services.mbsync.Unit.After = [ "sops-nix.service" ];
   home.packages = with pkgs; [ sops age ];
-
-  wayland.windowManager.hyprland.settings.exec-once =
-    [ "systemctl --user start sops-nix" ];
 }

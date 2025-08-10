@@ -4,7 +4,7 @@ let
   keyboardLayout = config.var.keyboardLayout;
   configDir = config.var.configDirectory;
 in {
-
+  
   networking.hostName = hostname;
 
   networking.networkmanager.enable = true;
@@ -76,8 +76,8 @@ in {
 
   environment.systemPackages = with pkgs; [
     hyprland-qtutils
-    xdg-desktop-portal-hyprland
-    xdg-desktop-portal-gtk
+    #xdg-desktop-portal-hyprland
+    #xdg-desktop-portal-gtk
     fd
     bc
     gcc
@@ -86,7 +86,7 @@ in {
     wget
     curl
     #rmpc
-    #mpd
+    #isc-dhcp
     retroarchFull
     appimage-run
     (modrinth-app.overrideAttrs (oldAttrs: {
@@ -100,6 +100,14 @@ in {
 				+ oldAttrs.buildCommand;
 		}))
   ];
+
+#  xdg.portal = {
+#  enable = true;
+#  extraPortals = [
+#    pkgs.xdg-desktop-portal-hyprland
+#    pkgs.xdg-desktop-portal-gtk
+#    ];
+#  };
 
   services.logind.extraConfig = ''
     # don’t shutdown when power button is short-pressed

@@ -24,7 +24,7 @@ in
 
     logFile = "${mpdDataDir}/mpd.log"; # Use mpdDataDir
 
-    bindToAddress = "localhost";
+    bindToAddress = "any";
     port = 6600;
 
     audioOutputs = [

@@ -13,7 +13,6 @@
     ../../nixos/utils.nix
     ../../nixos/tailscale.nix
     ../../nixos/steam.nix
-    #../../home/system/mpd
 
     # You should let those lines as is
     ./hardware-configuration.nix
@@ -26,4 +25,15 @@
 
   # Don't touch this
   system.stateVersion = "24.05";
+
+  # Renamed from hardware.opengl.driSupport32Bit
+  hardware.graphics.enable32Bit = true;
+
+  # Configure xdg-desktop-portal backends to fix build warning.
+  xdg.portal = {
+    enable = true;
+    # Use the portal from your hyprland flake input for consistency
+    extraPortals = [ inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk ];
+    config.common.default = [ "hyprland" "gtk" ];
+  };
 }

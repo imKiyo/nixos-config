@@ -9,14 +9,14 @@
       active-opacity = 0.90;
       inactive-opacity = 0.85;
       blur = true;
-      border-size = 2;
+      border-size = 1;
       animation-speed = "fast"; # "fast" | "medium" | "slow"
       fetch = "neofetch"; # "nerdfetch" | "neofetch" | "pfetch" | "none"
 
       bar = { # Hyprpanel
         position = "top"; # "top" | "bottom"
         transparent = true;
-        transparentButtons = true;
+        transparentButtons = false;
         floating = false;
       };
     };
@@ -81,8 +81,10 @@
       polarity = "dark";
       image = pkgs.fetchurl {
         url =
-          "https://raw.githubusercontent.com/anotherhadi/nixy-wallpapers/refs/heads/main/wallpapers/dark.png";
-        sha256 = "1dxmncq7wyj3m1gpl3jv4i4nxcrrv1fi8mbyz61qkbhmgdqgch8h";
+          "https://raw.githubusercontent.com/imKiyo/nixy-wallpapers/refs/heads/main/wallpapers/wallpaper1.jpeg";
+        # to get ur sha256 type in terminal nix-prefetch-url "https://raw.githubusercontent.com/imKiyo/nixy-wallpapers/refs/heads/main/wallpapers/frieren1.png"
+        # sha256 = "177svqrhnpz0n3da9hpvknc6y8h2lc5s9pqdqka3izg7zda42zhv";
+        sha256 = "1w1cpl3395vc8hpdf33scsbyadi973gfbqbrfvh2kp64kl8ycacd";
       };
     };
   };

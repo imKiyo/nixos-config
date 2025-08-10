@@ -3,7 +3,7 @@
     bind = [
       "$mod,T, exec, ${pkgs.kitty}/bin/kitty" # Kitty
       "$mod,E, exec, ${pkgs.xfce.thunar}/bin/thunar" # Thunar
-      "$mod,F, exec, zen" # Zen Browser
+      "$mod,F, exec, /etc/profiles/per-user/kiyo/bin/zen" # Zen Browser
       "$mod,K, exec, ${pkgs.bitwarden}/bin/bitwarden" # Bitwarden
       "$mod,L, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock
       "$mod,X, exec, powermenu" # Powermenu
@@ -52,7 +52,6 @@
       ",XF86AudioPlay, exec, ${pkgs.playerctl}/bin/playerctl play-pause" # Play/Pause Song
       ",XF86AudioNext, exec, ${pkgs.playerctl}/bin/playerctl next" # Next Song
       ",XF86AudioPrev, exec, ${pkgs.playerctl}/bin/playerctl previous" # Previous Song
-      #",switch:Lid Switch, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock when closing Lid
     ];
 
     bindle = [
