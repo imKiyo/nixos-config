@@ -14,7 +14,5 @@
     '';
   };
   
-  systemd.services.mpd.serviceConfig = {
-    ReadWritePaths = "/home/kiyo";
-  };
+  systemd.services.mpd.path = [ "/home/kiyo" ];
 }
