@@ -27,6 +27,19 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
+  /* networking.networkmanager.enable = false;
+
+  networking.interfaces.enp3s0.ipv4.addresses = [
+    {
+      adress = "192.168.1.5";
+      prefixLength = 24;
+    }
+  ];
+  netorking.defaultGateway = "192.168.1.1";
+
+  networking.nameservers = [
+    "8.8.8.8"
+  ]; */
   # networking.interfaces.enp3s0.useDHCP = lib.mkDefault true;
   # networking.interfaces.tailscale0.useDHCP = lib.mkDefault true;
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";

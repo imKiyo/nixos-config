@@ -19,7 +19,7 @@ in {
       allow_markup = true;
       width = 650;
       show = "drun";
-      prompt = "meow";
+      prompt = "Apps";
       normal_window = true;
       layer = "top";
       height = "325px";
@@ -34,7 +34,7 @@ in {
       parse_search = false;
       insensitive = true;
       hide_scroll = true;
-      no_actions = false;
+      no_actions = true;
       sort_order = "default";
       gtk_dark = true;
       filter_rate = 100;
