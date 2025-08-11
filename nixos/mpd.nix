@@ -10,6 +10,5 @@
           name "My PipeWire Output"
       }
     '';
-    group = "users";
   };
 }
