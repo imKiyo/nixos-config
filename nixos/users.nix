@@ -13,5 +13,6 @@ in {
       isSystemUser = true;
       group = "users";
       extraGroups = [ "users" ];
+    };
   };
 }
