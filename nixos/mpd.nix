@@ -6,12 +6,15 @@
     musicDirectory = "/home/kiyo/Music";
     user = "mpd";
     group = "users";
-    extraAllowedDirs = [ "/home/kiyo" ];
     extraConfig = ''
       audio_output {
           type "pipewire"
           name "My PipeWire Output"
       }
     '';
+  };
+  
+  systemd.services.mpd.serviceConfig = {
+    ReadWritePaths = "/home/kiyo";
   };
 }
