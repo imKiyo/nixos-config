@@ -4,7 +4,7 @@
 
   sops = {
     age.keyFile = "/home/kiyo/.config/sops/age/keys.txt";
-    defaultSopsFile = ./secrets.yaml;
+    defaultSopsFile = "/home/kiyo/.config/nixos/hosts/nixos/secrets/secrets.yaml";
     secrets = {
       git_ssh_key = {
         path = "/home/kiyo/.ssh/id_ed25519";

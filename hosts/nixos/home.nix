@@ -36,10 +36,9 @@
     ../../home/system/mime # lets you chose which app should run said files
     ../../home/system/udiskie
     ../../home/system/clipman
-    #../../home/system/mpd
     #../../home/system/quickshell
 
-    
+    #./secrets
   ];
 
   home = {
@@ -93,6 +92,9 @@
       #ydotool
       #dotool
       xautoclick
+      yt-dlp
+      ffmpeg
+      rmpc
 
       # Quickshell setup in progress
       inputs.quickshell.packages.x86_64-linux.default
@@ -112,13 +114,13 @@
       material-symbols
       scanmem # Its like a Cheat Engine but in a terminal
     ];
+    
 
     # Import my profile picture, used by the hyprpanel dashboard
     file.".face.icon" = { source = ./profile_picture.png; };
 
     # Don't touch this
     stateVersion = "24.05";
-
     
   };
 

@@ -13,6 +13,7 @@
     ../../nixos/utils.nix
     ../../nixos/tailscale.nix
     ../../nixos/steam.nix
+    ./../nixos/mpd.nix
 
     # You should let those lines as is
     ./hardware-configuration.nix
