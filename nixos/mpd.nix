@@ -4,7 +4,7 @@
   services.mpd = {
     enable = true;
     musicDirectory = "/home/kiyo/Music";
-    user = "kiyo";
+    user = "mpd";
     group = "users";
     extraConfig = ''
       audio_output {
