@@ -4,8 +4,7 @@
   services.mpd = {
     enable = true;
     musicDirectory = "/home/kiyo/Music";
-    user = "mpd";
-    group = "users";
+    user = "kiyo";
     extraConfig = ''
       audio_output {
           type "pipewire"
@@ -13,6 +12,4 @@
       }
     '';
   };
-  
-  systemd.services.mpd.path = [ "/home/kiyo" ];
 }
