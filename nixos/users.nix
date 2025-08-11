@@ -9,6 +9,9 @@ in {
       description = "${username} account";
       extraGroups = [ "networkmanager" "wheel" "users" ];
     };
-    extraUsers.mpd.extraGroups = [ "users" ];
+    users.mpd = {
+      isSystemUser = true;
+      group = "users";
+      extraGroups = [ "users" ];
   };
 }
