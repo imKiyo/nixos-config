@@ -114,17 +114,6 @@
       material-symbols
       scanmem # Its like a Cheat Engine but in a terminal
     ];
-    
-    programs.mpd = {
-      enable = true;
-      musicDirectory = "/home/kiyo/Music";
-      extraConfig = ''
-        audio_output {
-            type "pipewire"
-            name "My PipeWire Output"
-        }
-      '';
-    };
 
     # Import my profile picture, used by the hyprpanel dashboard
     file.".face.icon" = { source = ./profile_picture.png; };
