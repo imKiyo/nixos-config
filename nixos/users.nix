@@ -7,7 +7,8 @@ in {
     users.${username} = {
       isNormalUser = true;
       description = "${username} account";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" "users" ];
     };
+    extraUsers.mpd.extraGroups = [ "users" ];
   };
 }
