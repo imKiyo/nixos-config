@@ -5,7 +5,7 @@
     enable = true;
     startWhenNeeded = false;
     musicDirectory = "/home/kiyo/Music";
-    user = "mpd";
+    user = "kiyo";
     group = "users";
     extraConfig = ''
       audio_output {
