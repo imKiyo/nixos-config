@@ -20,7 +20,7 @@
     ../../home/programs/nvf # neovim but more autistic
     ../../home/programs/yazi
     ../../home/programs/rmpc
-    ../../home/programs/mpd # Music Player Daemon
+    #../../home/programs/mpd # Music Player Daemon
 
     # Scripts
     ../../home/scripts # All scripts

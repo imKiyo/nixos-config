@@ -3,6 +3,7 @@
 {
   services.mpd = {
     enable = true;
+    startWhenNeeded = false;
     musicDirectory = "/home/kiyo/Music";
     user = "mpd";
     group = "users";
@@ -12,9 +13,5 @@
           name "My PipeWire Output"
       }
     '';
-  };
-  
-  systemd.services.mpd.serviceConfig = {
-    ReadWritePaths = "/home/kiyo/Music";
   };
 }
