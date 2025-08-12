@@ -9,13 +9,12 @@
     group = "users";
     extraConfig = ''
       audio_output {
-          type "alsa"
-          name "ALSA Output"
-          device "default"
+          type "pipewire"
+          name "PipeWire Output"
       }
     '';
   };
   
-  # Ensure proper permissions
-  users.users.kiyo.extraGroups = [ "audio" ];
+  security.rtkit.enable = true;
+  users.users.kiyo.extraGroups = [ "audio" "pipewire" ];
 }
