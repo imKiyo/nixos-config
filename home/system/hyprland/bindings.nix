@@ -14,7 +14,7 @@
       "$mod,L, exec, ~/.config/hypr/scripts/autoclick.sh"
 
       # Testing new keybinds
-      "$mod,G, toggle-oppacity" # Toggle Opaque Windows
+      #"$mod,G, toggleoppacity" # Toggle Opaque Windows
       "$mod,S, pin" # Pin Window
       "$mod,mouse:273, movetoworkspace, empty" # Move Window to Workspace (MiddleMouseClick)
       
