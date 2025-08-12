@@ -9,9 +9,8 @@
     group = "users";
     extraConfig = ''
       audio_output {
-          type "alsa"
-          name "Scarlett 2i2"
-          device "hw:USB"
+          type "null"
+          name "Null Output"
       }
     '';
   };
