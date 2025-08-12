@@ -13,8 +13,4 @@
       }
     '';
   };
-  
-  systemd.services.mpd.serviceConfig = {
-    ReadWritePaths = "/home/kiyo/Music";
-  };
 }
