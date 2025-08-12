@@ -1,3 +1,4 @@
+{ config, pkgs, ... }:
 {
   # Disable system MPD service
   services.mpd.enable = false;
