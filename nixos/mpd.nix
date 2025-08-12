@@ -9,12 +9,10 @@
     group = "users";
     extraConfig = ''
       audio_output {
-          type "pipewire"
-          name "PipeWire Output"
+          type "alsa"
+          name "Scarlett 2i2"
+          device "hw:USB"
       }
     '';
   };
-  
-  security.rtkit.enable = true;
-  users.users.kiyo.extraGroups = [ "audio" "pipewire" ];
 }
