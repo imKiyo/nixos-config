@@ -20,6 +20,7 @@
     ../../home/programs/nvf # neovim but more autistic
     ../../home/programs/yazi
     ../../home/programs/rmpc
+    ../../home/programs/mpd # Music Player Daemon
 
     # Scripts
     ../../home/scripts # All scripts
@@ -123,19 +124,6 @@
     
   };
 
-  programs = {
-    home-manager.enable = true;
+  programs.home-manager.enable = true;
 
-    mpd = {
-      enable = true;
-      musicDirectory = "/home/kiyo/Music";
-      settings = {
-        audio_output = {
-          type = "pipewire";
-          name = "My PipeWire Output";
-        };
-      };
-    };
-  };
-  
 }
