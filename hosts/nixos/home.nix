@@ -123,15 +123,17 @@
     
   };
 
-  programs.home-manager.enable = true;
+  programs = {
+    home-manager.enable = true;
 
-  programs.mpd = {
-    enable = true;
-    musicDirectory = "/home/kiyo/Music";
-    settings = {
-      audio_output = {
-        type = "pipewire";
-        name = "My PipeWire Output";
+    mpd = {
+      enable = true;
+      musicDirectory = "/home/kiyo/Music";
+      settings = {
+        audio_output = {
+          type = "pipewire";
+          name = "My PipeWire Output";
+        };
       };
     };
   };
