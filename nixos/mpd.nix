@@ -11,15 +11,7 @@
       audio_output {
           type "alsa"
           name "ALSA Output"
-          device "hw:CARD=USB,DEV=0"  # Your Scarlett interface
-      }
-      
-      # Fallback output
-      audio_output {
-          type "alsa"
-          name "HDMI Output"
-          device "hw:CARD=NVidia,DEV=3"  # Your HDMI output
-          enabled "no"
+          device "default"
       }
     '';
   };
