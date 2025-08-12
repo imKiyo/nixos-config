@@ -9,9 +9,8 @@
     group = "users";
     extraConfig = ''
       audio_output {
-          type "pipewire"
-          name "My PipeWire Output"
-          server "unix:/run/user/1000/pulse/native"
+          type "pulse"
+          name "PulseAudio Output"
       }
     '';
   };
