@@ -104,6 +104,7 @@ in {
       internetpls = "sudo sh -c 'systemctl stop NetworkManager && ip a add 192.168.1.5/24 dev enp3s0 && ip r add default via 192.168.1.1 dev enp3s0 && echo \"nameserver 8.8.8.8\" > /etc/resolv.conf && ping -c 3 google.com'";
       godot = "steam-run ~/Downloads/GODOT/Godot_v4.4.1-stable_linux.x86_64";
       osrs = "flatpak run --user com.jagex.Launcher";
+      yt = "yt-dlp -o \"/home/kiyo/Music/%(title)s.%(ext)s\" -t mp3";
 
       # games
       vintagestory = "flatpak run at.vintagestory.VintageStory";
