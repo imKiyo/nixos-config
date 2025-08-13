@@ -96,6 +96,8 @@
       yt-dlp
       ffmpeg
       rmpc
+      picard
+      spotdl
 
       # Quickshell setup in progress
       inputs.quickshell.packages.x86_64-linux.default

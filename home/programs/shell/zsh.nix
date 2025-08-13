@@ -105,6 +105,7 @@ in {
       godot = "steam-run ~/Downloads/GODOT/Godot_v4.4.1-stable_linux.x86_64";
       osrs = "flatpak run --user com.jagex.Launcher";
       yt = "yt-dlp -o \"/home/kiyo/Music/%(title)s.%(ext)s\" -t mp3";
+      yay = "nix-shell -p";
 
       # games
       vintagestory = "flatpak run at.vintagestory.VintageStory";

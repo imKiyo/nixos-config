@@ -16,7 +16,7 @@
       # Testing new keybinds
       #"$mod,G, toggleoppacity" # Toggle Opaque Windows
       "$mod,S, pin" # Pin Window
-      "$mod,mouse:273, movetoworkspace, empty" # Move Window to Workspace (MiddleMouseClick)
+      "$mod,mouse:273, movetoworkspace, empty" # Move Window to Workspace (MouseRightClick)
       
 
       "$mod,Q, killactive," # Close window
