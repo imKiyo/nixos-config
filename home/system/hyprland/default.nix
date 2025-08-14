@@ -144,7 +144,7 @@ in {
       };
 
       windowrulev2 =
-        [ "float, tag:modal" "pin, tag:modal" "center, tag:modal" ];
+        [ "float, tag:modal" "pin, tag:modal" "center, tag:modal" "opaque,title:^(Fischer'sFishingJourney)$" ];
 
       layerrule = [ "noanim, launcher" "noanim, ^ags-.*" ];
 
