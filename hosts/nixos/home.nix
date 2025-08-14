@@ -98,6 +98,7 @@
       rmpc
       picard
       spotdl
+      wl-clicker
 
       # Quickshell setup in progress
       inputs.quickshell.packages.x86_64-linux.default
