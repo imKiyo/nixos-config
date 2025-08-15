@@ -107,6 +107,9 @@ in {
       yt = "yt-dlp -o \"/home/kiyo/Music/%(title)s.%(ext)s\" -t mp3";
       yay = "nix-shell -p";
 
+      # test of a quicker extraction of any archive file
+      x = "f() { local f=\"$1\"; case \"$f\" in *.zip) unzip -q \"$f\";; *.rar) unrar x \"$f\";; *.7z) 7z x \"$f\";; *.tar) tar xf \"$f\";; *.tar.gz|*.tgz) tar xzf \"$f\";; *.tar.bz2|*.tbz) tar xjf \"$f\";; *.tar.xz|*.txz) tar xJf \"$f\";; *) echo \"Unsupported file type: $f\";; esac; }; f'";
+
       # games
       vintagestory = "flatpak run at.vintagestory.VintageStory";
     };
