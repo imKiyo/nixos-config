@@ -100,6 +100,8 @@
       spotdl
       wl-clicker
 
+      mindustry-wayland
+
       # Quickshell setup in progress
       inputs.quickshell.packages.x86_64-linux.default
       fish
