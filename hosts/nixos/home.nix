@@ -38,6 +38,7 @@
     ../../home/system/udiskie
     ../../home/system/clipman
     #../../home/system/quickshell
+    ../../home/system/vicinae
 
     #./secrets
   ];
