@@ -93,16 +93,16 @@ in {
         name = "Custom Theme";
         description = "Theme generated from NixOS defaults colorScheme";
         palette = {
-          background = "#${nixosConfig.defaults.colorScheme.palette.base01}";
-          foreground = "#${nixosConfig.defaults.colorScheme.palette.base05}";
-          blue = "#${nixosConfig.defaults.colorScheme.palette.base0D}";
-          green = "#${nixosConfig.defaults.colorScheme.palette.base0B}";
-          magenta = "#${nixosConfig.defaults.colorScheme.palette.base0E}";
-          orange = "#${nixosConfig.defaults.colorScheme.palette.base09}";
-          purple = "#${nixosConfig.defaults.colorScheme.palette.base0F}";
-          red = "#${nixosConfig.defaults.colorScheme.palette.base08}";
-          yellow = "#${nixosConfig.defaults.colorScheme.palette.base0A}";
-          cyan = "#${nixosConfig.defaults.colorScheme.palette.base0C}";
+          background = "#${nixosConfig.colorScheme.palette.base01}";
+          foreground = "#${nixosConfig.colorScheme.palette.base05}";
+          blue = "#${nixosConfig.colorScheme.palette.base0D}";
+          green = "#${nixosConfig.colorScheme.palette.base0B}";
+          magenta = "#${nixosConfig.colorScheme.palette.base0E}";
+          orange = "#${nixosConfig.colorScheme.palette.base09}";
+          purple = "#${nixosConfig.colorScheme.palette.base0F}";
+          red = "#${nixosConfig.colorScheme.palette.base08}";
+          yellow = "#${nixosConfig.colorScheme.palette.base0A}";
+          cyan = "#${nixosConfig.colorScheme.palette.base0C}";
         };
       };
     };
