@@ -4,10 +4,10 @@
       "$mod,T, exec, ${pkgs.kitty}/bin/kitty" # Kitty
       "$mod,E, exec, ${pkgs.xfce.thunar}/bin/thunar" # Thunar
       "$mod,F, exec, /etc/profiles/per-user/kiyo/bin/zen" # Zen Browser
-      "$mod,K, exec, ${pkgs.bitwarden}/bin/bitwarden" # Bitwarden
+      #"$mod,K, exec, ${pkgs.bitwarden}/bin/bitwarden" # Bitwarden
       "$mod,L, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock
       "$mod,X, exec, powermenu" # Powermenu
-      "$mod,A, exec, menu" # Launcher
+      "$mod,K, exec, menu" # Launcher
       "$mod,C, exec, quickmenu" # Quickmenu
       "$shiftMod,SPACE, exec, hyprfocus-toggle" # Toggle HyprFocus
       "$mod,P, exec, ${pkgs.planify}/bin/io.github.alainm23.planify" # Planify
@@ -21,7 +21,8 @@
 
       "$mod,Q, killactive," # Close window
       "$mod,W, togglefloating," # Toggle Floating
-      "$mod,SPACE, fullscreen" # Toggle Fullscreen
+      "$mod,SPACE, ${config.services.vicinae.package}/bin/vicinae" # Open Vicinae Launcher
+      "$mod,A, fullscreen" # Toggle Fullscreen
       "$mod,left, movefocus, l" # Move focus left
       "$mod,right, movefocus, r" # Move focus Right
       "$mod,up, movefocus, u" # Move focus Up
