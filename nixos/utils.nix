@@ -63,6 +63,7 @@ in {
 
   services.libinput.enable = true;
   programs.dconf.enable = true;
+  programs.nix-ld.enable = true;
 
   # Faster rebuilding
   documentation = {

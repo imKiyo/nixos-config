@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ config, pkgs, ... }: {
   wayland.windowManager.hyprland.settings = {
     bind = [
       "$mod,T, exec, ${pkgs.kitty}/bin/kitty" # Kitty
@@ -7,6 +7,7 @@
       #"$mod,K, exec, ${pkgs.bitwarden}/bin/bitwarden" # Bitwarden
       "$mod,L, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock
       "$mod,X, exec, powermenu" # Powermenu
+      "$mod,SPACE, exec, /etc/profiles/per-user/kiyo/bin/vicinae" # Vicinae Launcher
       "$mod,K, exec, menu" # Launcher
       "$mod,C, exec, quickmenu" # Quickmenu
       "$shiftMod,SPACE, exec, hyprfocus-toggle" # Toggle HyprFocus
@@ -21,7 +22,6 @@
 
       "$mod,Q, killactive," # Close window
       "$mod,W, togglefloating," # Toggle Floating
-      "$mod,SPACE, ${config.services.vicinae.package}/bin/vicinae" # Open Vicinae Launcher
       "$mod,A, fullscreen" # Toggle Fullscreen
       "$mod,left, movefocus, l" # Move focus left
       "$mod,right, movefocus, r" # Move focus Right
