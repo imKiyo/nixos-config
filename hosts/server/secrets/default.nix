@@ -1,16 +1,16 @@
 { inputs, ... }: {
   sops = {
-    age.keyFile = "/home/hadi/.config/sops/age/keys.txt";
+    age.keyFile = "/home/kiyo/.config/sops/age/keys.txt";
     defaultSopsFile = ./secrets.yaml;
     secrets = {
       sshconfig = {
-        owner = "hadi";
-        path = "/home/hadi/.ssh/config";
+        owner = "kiyo";
+        path = "/home/kiyo/.ssh/config";
         mode = "0600";
       };
       github-key = {
-        owner = "hadi";
-        path = "/home/hadi/.ssh/github";
+        owner = "kiyo";
+        path = "/home/kiyo/.ssh/github";
         mode = "0600";
       };
       cloudflare-dns-token = { path = "/etc/cloudflare/dnskey.txt"; };

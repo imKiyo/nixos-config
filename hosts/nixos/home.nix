@@ -40,7 +40,7 @@
     #../../home/system/quickshell
     ../../home/system/vicinae
 
-    #./secrets
+    ./secrets
   ];
 
   home = {
@@ -100,6 +100,7 @@
       picard
       spotdl
       wl-clicker
+      #wlr-clip
 
       mindustry-wayland
 
