@@ -86,6 +86,7 @@ in {
     xdg-utils
     wget
     curl
+    sops
     #rmpc
     #isc-dhcp
     retroarchFull
