@@ -40,7 +40,7 @@
     #../../home/system/quickshell
     ../../home/system/vicinae
 
-    ./secrets
+    #./secrets
   ];
 
   home = {
