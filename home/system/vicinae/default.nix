@@ -14,7 +14,7 @@ with lib; let
 
     src = pkgs.fetchurl {
       url = "https://github.com/vicinaehq/vicinae/releases/download/v${version}/vicinae-linux-x86_64-v${version}.tar.gz";
-      sha256 = "sha256-+1GqpqJZ8nlze6AncfDdVK9jjOISx2Bfyu4LNmTt7Ns=";
+      sha256 = "sha256-2ePv/iU9hOvhgtLCkYBzLDHxJvGFnIFRyDlcxrrurW4=";
     };
 
     nativeBuildInputs = with pkgs; [autoPatchelfHook qt6.wrapQtAppsHook];
