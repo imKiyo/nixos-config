@@ -49,7 +49,7 @@
             {
               _module.args = { inherit inputs; };
             }
-            vicinae.homeManagerModules.default
+            inputsvicinae.homeManagerModules.default
             #inputs.nixos-hardware.nixosModules.omen-16-n0005ne # CHANGEME: check https://github.com/NixOS/nixos-hardware
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
