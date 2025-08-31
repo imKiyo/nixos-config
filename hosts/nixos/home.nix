@@ -1,6 +1,7 @@
 { pkgs, config, inputs, ... }: {
 
   imports = [
+    inputs.vicinae.homeManagerModules.default
     # Mostly user-specific configuration
     ./variables.nix
 
