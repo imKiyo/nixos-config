@@ -131,6 +131,11 @@
     stateVersion = "24.05";
     
   };
+  
+  services.vicinae = {
+    enable = true;
+    autoStart = true;
+  };
 
   programs.home-manager.enable = true;
 

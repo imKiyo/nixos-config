@@ -41,11 +41,6 @@ in {
       xkb.layout = keyboardLayout;
       xkb.variant = "";
     };
-    vicinae = {
-      enable = true; # default: false
-      autoStart = true; # default: true
-      #package = # specify package to use here. Can be omitted.
-    };
     gnome.gnome-keyring.enable = true;
 
     dbus.enable = true;
