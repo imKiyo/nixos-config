@@ -64,6 +64,11 @@ in {
   services.libinput.enable = true;
   programs.dconf.enable = true;
   programs.nix-ld.enable = true;
+  services.vicinae = {
+    enable = true; # default: false
+    autoStart = true; # default: true
+    package = # specify package to use here. Can be omitted.
+  };
 
   # Faster rebuilding
   documentation = {
