@@ -11,7 +11,7 @@
       blur = true;
       border-size = 1;
       animation-speed = "fast"; # "fast" | "medium" | "slow"
-      fetch = "neofetch"; # "nerdfetch" | "neofetch" | "pfetch" | "none"
+      fetch = "none"; # "nerdfetch" | "neofetch" | "pfetch" | "none"
 
       bar = { # Hyprpanel
         position = "top"; # "top" | "bottom"
