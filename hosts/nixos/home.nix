@@ -102,7 +102,7 @@
       spotdl
       wl-clicker
       #wlr-clip
-      gfn-electron
+      #gfn-electron
 
       mindustry-wayland
 

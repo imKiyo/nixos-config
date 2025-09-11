@@ -89,6 +89,7 @@ in {
     sops
     #rmpc
     #isc-dhcp
+    gfn-electron
     retroarchFull
     appimage-run
     (modrinth-app.overrideAttrs (oldAttrs: {
