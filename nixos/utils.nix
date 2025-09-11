@@ -90,6 +90,7 @@ in {
     #rmpc
     #isc-dhcp
     gfn-electron
+    ungoogled-chromium
     retroarchFull
     appimage-run
     (modrinth-app.overrideAttrs (oldAttrs: {
