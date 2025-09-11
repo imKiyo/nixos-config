@@ -27,6 +27,9 @@
   # Don't touch this
   system.stateVersion = "24.05";
 
+  # Enable the NVIDIA hardware support
+  hardware.steam-hardware.enable = true;
+
   # Renamed from hardware.opengl.driSupport32Bit
   hardware.graphics.enable32Bit = true;
 
