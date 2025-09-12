@@ -104,7 +104,9 @@
       #wlr-clip
       #gfn-electron
 
+      # Games and shit
       mindustry-wayland
+      beyond-all-reason
 
       # Quickshell setup in progress
       inputs.quickshell.packages.x86_64-linux.default
