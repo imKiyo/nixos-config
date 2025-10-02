@@ -119,11 +119,13 @@
         numpy
       ]))
       cava
+      itch
       bluez
       ddcutil
       brightnessctl
       curl
       material-symbols
+      n8n
       scanmem # Its like a Cheat Engine but in a terminal
     ];
 
