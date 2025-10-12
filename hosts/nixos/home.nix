@@ -103,6 +103,7 @@
       wl-clicker
       #wlr-clip
       #gfn-electron
+      rpcs3 # PS3 Emulator
 
       # Games and shit
       mindustry-wayland
