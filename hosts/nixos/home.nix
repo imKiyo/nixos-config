@@ -39,7 +39,6 @@
     ../../home/system/udiskie
     ../../home/system/clipman
     #../../home/system/quickshell
-    #../../home/system/vicinae
 
     #./secrets
   ];
@@ -92,7 +91,7 @@
       rofi
 
       #Testing apps
-      #ydotool
+      ydotool
       #dotool
       xautoclick
       yt-dlp
@@ -104,10 +103,14 @@
       #wlr-clip
       #gfn-electron
       rpcs3 # PS3 Emulator
+      protontricks
+      freedroidrpg
 
       # Games and shit
       mindustry-wayland
       beyond-all-reason
+      python313Packages.pillow
+      devilutionx # Diablo 1 engine reimplementation
 
       # Quickshell setup in progress
       inputs.quickshell.packages.x86_64-linux.default

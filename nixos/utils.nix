@@ -77,8 +77,6 @@ in {
 
   environment.systemPackages = with pkgs; [
     hyprland-qtutils
-    #xdg-desktop-portal-hyprland
-    #xdg-desktop-portal-gtk
     fd
     bc
     gcc
@@ -87,11 +85,8 @@ in {
     wget
     curl
     sops
-    #rmpc
     #isc-dhcp
     gfn-electron
-    google-chrome
-    #ungoogled-chromium
     retroarchFull
     appimage-run
     (modrinth-app.overrideAttrs (oldAttrs: {
@@ -105,14 +100,6 @@ in {
 				+ oldAttrs.buildCommand;
 		}))
   ];
-
-#  xdg.portal = {
-#  enable = true;
-#  extraPortals = [
-#    pkgs.xdg-desktop-portal-hyprland
-#    pkgs.xdg-desktop-portal-gtk
-#    ];
-#  };
 
   services.logind.extraConfig = ''
     # don’t shutdown when power button is short-pressed

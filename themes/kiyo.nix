@@ -3,10 +3,10 @@
   options.theme = lib.mkOption {
     type = lib.types.attrs;
     default = {
-      rounding = 10;
+      rounding = 5;
       gaps-in = 1;
       gaps-out = 1;
-      active-opacity = 0.90;
+      active-opacity = 1.00;
       inactive-opacity = 0.85;
       blur = true;
       border-size = 1;
