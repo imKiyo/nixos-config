@@ -85,6 +85,8 @@
       vscode
 
       # Gaming
+      wine-staging
+      gamescope
       wine
       winetricks
       lutris
@@ -105,6 +107,7 @@
       rpcs3 # PS3 Emulator
       protontricks
       freedroidrpg
+      bambu-studio
 
       # Games and shit
       mindustry-wayland
