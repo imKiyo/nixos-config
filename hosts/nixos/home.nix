@@ -113,7 +113,6 @@
       mindustry-wayland
       beyond-all-reason
       python313Packages.pillow
-      devilutionx # Diablo 1 engine reimplementation
 
       # Quickshell setup in progress
       inputs.quickshell.packages.x86_64-linux.default

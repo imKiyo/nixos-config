@@ -18,7 +18,7 @@ in {
     qt5.qtwayland
     qt6.qtwayland
     libsForQt5.qt5ct
-    qt6ct
+    qt6Packages.qt6ct
     hyprshot
     hyprpicker
     swappy
@@ -132,8 +132,6 @@ in {
         mfact = 0.5;
       };
 
-      gestures = { workspace_swipe = true; };
-
       misc = {
         vfr = true;
         disable_hyprland_logo = true;
@@ -157,6 +155,8 @@ in {
         repeat_delay = 300;
         repeat_rate = 50;
         numlock_by_default = true;
+
+        workspace_swipe = true;
 
         touchpad = {
           natural_scroll = true;

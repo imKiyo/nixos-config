@@ -87,7 +87,7 @@ in {
     sops
     #isc-dhcp
     gfn-electron
-    retroarchFull
+    retroarch-full
     appimage-run
     (modrinth-app.overrideAttrs (oldAttrs: {
 			buildCommand = 
@@ -101,8 +101,5 @@ in {
 		}))
   ];
 
-  services.logind.extraConfig = ''
-    # don’t shutdown when power button is short-pressed
-    HandlePowerKey=ignore
-  '';
+  services.logind.settings.Login.HandlePowerKey = "ignore";
 }
