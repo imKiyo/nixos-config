@@ -86,10 +86,10 @@ in {
     curl
     sops
     #isc-dhcp
-    gfn-electron
+    #gfn-electron
     retroarch-full
     appimage-run
-    (modrinth-app.overrideAttrs (oldAttrs: {
+    /*     (modrinth-app.overrideAttrs (oldAttrs: {
 			buildCommand = 
 				''
 					gappsWrapperArgs+=(
@@ -98,7 +98,7 @@ in {
 					)
 				''
 				+ oldAttrs.buildCommand;
-		}))
+		})) */
   ];
 
   services.logind.settings.Login.HandlePowerKey = "ignore";

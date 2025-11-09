@@ -44,10 +44,10 @@
       nixos =
         # CHANGEME: This should match the 'hostname' in your variables.nix file
         nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
           modules = [
             {
               _module.args = { inherit inputs; };
+              nixpkgs.hostPlatform = "x86_64-linux";  # ← Moved inside here
             }
             #inputs.vicinae.homeManagerModules.default
             #inputs.nixos-hardware.nixosModules.omen-16-n0005ne # CHANGEME: check https://github.com/NixOS/nixos-hardware
@@ -57,9 +57,11 @@
           ];
         };
       jack = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
         modules = [
-          { _module.args = { inherit inputs; }; }
+          { 
+            _module.args = { inherit inputs; };
+            nixpkgs.hostPlatform = "x86_64-linux";  # ← Moved inside here
+          }
           inputs.home-manager.nixosModules.home-manager
           inputs.stylix.nixosModules.stylix
           inputs.sops-nix.nixosModules.sops

@@ -41,13 +41,17 @@ in {
     enable = true;
     xwayland.enable = true;
     systemd.enable = true;
+    #ecosystem.no_update = true; # what the frick is the actual code
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
     settings = {
       "$mod" = "SUPER";
       "$shiftMod" = "SUPER_SHIFT";
 
-      exec-once = [ "dbus-update-activation-environment --systemd --all" ];
+      exec-once = [
+        "dbus-update-activation-environment --systemd --all"
+        "internetpls"
+      ];
 
       monitor = [
         "HDMI-A-3,1920x1080@60,0x0,1"
@@ -138,6 +142,7 @@ in {
         disable_splash_rendering = true;
         disable_autoreload = true;
         focus_on_activate = true;
+        
         new_window_takes_over_fullscreen = 2;
       };
 
@@ -148,16 +153,13 @@ in {
 
       input = {
         kb_layout = keyboardLayout;
-
+        #workspace_swipe = true;
         kb_options = "caps:escape";
         follow_mouse = 1;
         sensitivity = 0.5;
         repeat_delay = 300;
         repeat_rate = 50;
         numlock_by_default = true;
-
-        workspace_swipe = true;
-
         touchpad = {
           natural_scroll = true;
           clickfinger_behavior = true;

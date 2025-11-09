@@ -3,11 +3,13 @@
     bind = [
       "$mod,T, exec, ${pkgs.kitty}/bin/kitty" # Kitty
       "$mod,E, exec, ${pkgs.xfce.thunar}/bin/thunar" # Thunar
-      "$mod,F, exec, /etc/profiles/per-user/kiyo/bin/zen" # Zen Browser
+      #"$mod,F, exec, /etc/profiles/per-user/kiyo/bin/zen" # Zen Browser
+      "$mod,F, exec, zen-beta" # Zen Browser
       #"$mod,K, exec, ${pkgs.bitwarden}/bin/bitwarden" # Bitwarden
       "$mod,L, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock
       "$mod,X, exec, powermenu" # Powermenu
-      "$mod,SPACE, exec, /etc/profiles/per-user/kiyo/bin/vicinae" # Vicinae Launcher
+      #"$mod,SPACE, exec, /etc/profiles/per-user/kiyo/bin/vicinae" # Vicinae Launcher
+      "$mod,SPACE, exec, vicinae toggle"
       "$mod,K, exec, menu" # Launcher
       "$mod,C, exec, quickmenu" # Quickmenu
       "$shiftMod,SPACE, exec, hyprfocus-toggle" # Toggle HyprFocus

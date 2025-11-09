@@ -146,6 +146,11 @@
   services.vicinae = {
     enable = true;
     autoStart = true;
+    settings = {
+        window = {
+          exclusiveZone = false;
+        };
+    };
   };
 
   programs.home-manager.enable = true;

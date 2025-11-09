@@ -17,6 +17,10 @@ in {
     settings = {
       auto-optimise-store = true;
       experimental-features = [ "nix-command" "flakes" ];
+
+      download-buffer-size = 536870912;  # 512 MB for gigabit internet
+      http-connections = 128;  # Allow more parallel downloads
+
       substituters = [
         "https://cache.nixos.org/"
         "https://hyprland.cachix.org"
