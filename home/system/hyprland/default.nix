@@ -15,26 +15,26 @@ in {
     [ ./animations.nix ./bindings.nix ./polkitagent.nix ./hyprspace.nix ];
 
   home.packages = with pkgs; [
-    qt5.qtwayland
-    qt6.qtwayland
-    libsForQt5.qt5ct
-    qt6Packages.qt6ct
-    hyprshot
-    hyprpicker
-    swappy
-    imv
-    wf-recorder
-    wlr-randr
-    wl-clipboard
-    brightnessctl
-    gnome-themes-extra
-    libva
-    dconf
-    wayland-utils
-    wayland-protocols
-    glib
-    direnv
-    meson
+    qt5.qtwayland #
+    qt6.qtwayland #
+    libsForQt5.qt5ct #
+    qt6Packages.qt6ct #
+    hyprshot #
+    hyprpicker #
+    swappy #
+    imv #
+    wf-recorder #
+    wlr-randr #
+    wl-clipboard #
+    brightnessctl #
+    gnome-themes-extra #
+    libva #
+    dconf #
+    wayland-utils #
+    wayland-protocols #
+    glib #
+    direnv #
+    meson #
   ];
 
   wayland.windowManager.hyprland = {
@@ -149,7 +149,13 @@ in {
       windowrulev2 =
         [ "float, tag:modal" "pin, tag:modal" "center, tag:modal" ];
 
-      layerrule = [ "noanim, launcher" "noanim, ^ags-.*" ];
+      layerrule = [
+        "noanim, launcher"
+        "noanim, ^ags-.*"
+        "blur, vicinae"
+        "ignorealpha 0, vicinae"
+        "noanim, vicinae"
+      ];
 
       input = {
         kb_layout = keyboardLayout;
@@ -165,7 +171,6 @@ in {
           clickfinger_behavior = true;
         };
       };
-
     };
   };
 }

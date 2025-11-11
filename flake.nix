@@ -50,7 +50,6 @@
               _module.args = { inherit inputs; };
               nixpkgs.hostPlatform = "x86_64-linux";  # ← Moved inside here
             }
-            #inputs.vicinae.homeManagerModules.default
             #inputs.nixos-hardware.nixosModules.omen-16-n0005ne # CHANGEME: check https://github.com/NixOS/nixos-hardware
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
