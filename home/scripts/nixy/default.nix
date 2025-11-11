@@ -24,7 +24,6 @@ let
         # "icon;name;command"[]
         apps=(
           "󰑓;Rebuild;nixy rebuild"
-          "󰑓;Rebuild;nixy rebuild w show-trace"
           "󰦗;Upgrade;nixy upgrade"
           "󰚰;Update;nixy update"
           ";Collect Garbage;nixy gc"
@@ -52,8 +51,6 @@ let
 
       if [[ $1 == "rebuild" ]];then
         sudo nixos-rebuild switch --flake ${configDirectory}#${hostname}
-      elif [[ $1 == "rebuild w show-trace" ]];then
-        sudo nixos-rebuild switch --flake ${configDirectory}#${hostname} --show-trace
       elif [[ $1 == "upgrade" ]];then
         sudo nixos-rebuild switch --upgrade --flake '${configDirectory}#${hostname}'
       elif [[ $1 == "update" ]];then

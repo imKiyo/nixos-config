@@ -36,6 +36,7 @@
       inputs.hyprland.follows = "hyprland";
     };
     vicinae.url = "github:vicinaehq/vicinae";
+    nix-ai.url = "github:olafkfreund/nix-ai-help";
 
   };
 
@@ -56,19 +57,6 @@
             ./hosts/nixos/configuration.nix
           ];
         };
-      jack = nixpkgs.lib.nixosSystem {
-        modules = [
-          { 
-            _module.args = { inherit inputs; };
-            nixpkgs.hostPlatform = "x86_64-linux";  # ← Moved inside here
-          }
-          inputs.home-manager.nixosModules.home-manager
-          inputs.stylix.nixosModules.stylix
-          inputs.sops-nix.nixosModules.sops
-          inputs.nixarr.nixosModules.default
-          ./hosts/server/configuration.nix
-        ];
-      };
     };
   };
 }

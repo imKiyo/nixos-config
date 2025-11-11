@@ -118,6 +118,7 @@
 
       # Quickshell setup in progress
       inputs.quickshell.packages.x86_64-linux.default
+      inputs.nix-ai.packages.${pkgs.system}.default
       fish
       jq
       fd
@@ -138,7 +139,7 @@
     ];
 
     # Import my profile picture, used by the hyprpanel dashboard
-    file.".face.icon" = { source = ./profile_picture.png; };
+    file.".face.icon" = { source = ./meoww.jpg; };
 
     # Don't touch this
     stateVersion = "24.05";
