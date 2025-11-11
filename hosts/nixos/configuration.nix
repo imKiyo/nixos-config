@@ -15,6 +15,8 @@
     ../../nixos/steam.nix
     ../../nixos/mpd.nix
 
+    ./secrets
+
     # You should let those lines as is
     ./hardware-configuration.nix
     ./variables.nix

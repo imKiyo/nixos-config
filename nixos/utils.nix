@@ -89,6 +89,7 @@ in {
     #gfn-electron
     retroarch-full
     appimage-run
+    age
     /*     (modrinth-app.overrideAttrs (oldAttrs: {
 			buildCommand = 
 				''

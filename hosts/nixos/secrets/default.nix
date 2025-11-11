@@ -1,5 +1,4 @@
-# Those are my secrets, encrypted with sops
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, config, ... }: {
   imports = [ inputs.sops-nix.homeManagerModules.sops ];
 
   sops = {
@@ -7,8 +6,7 @@
     defaultSopsFile = "/home/kiyo/.config/nixos/hosts/nixos/secrets/secrets.yaml";
     secrets = {
       git_ssh_key = {
-        path = "/home/kiyo/.ssh/id_ed25519";
-        mode = "0600";
+        path = "${config.home.homeDirectory}/.ssh/id_ed25519";
       };
     };
   };
