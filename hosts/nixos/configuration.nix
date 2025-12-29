@@ -1,4 +1,7 @@
 { config, pkgs, inputs, ... }: {
+  # Lock the kernel to a specific version to maintain compatibility with the NVIDIA driver.
+  boot.kernelPackages = pkgs.linuxPackages_6_17;
+
   imports = [
     # Mostly system related configuration
     ../../nixos/nvidia.nix

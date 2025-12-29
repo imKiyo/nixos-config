@@ -31,10 +31,6 @@
       url = "github:yazi-rs/plugins";
       flake = false;
     };
-    hyprspace = {
-      url = "github:KZDKM/Hyprspace";
-      inputs.hyprland.follows = "hyprland";
-    };
     vicinae.url = "github:vicinaehq/vicinae";
     nix-ai.url = "github:olafkfreund/nix-ai-help";
 

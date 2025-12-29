@@ -4,11 +4,14 @@ let
   keyboardLayout = config.var.keyboardLayout;
   configDir = config.var.configDirectory;
 in {
-  
+
   networking.hostName = hostname;
 
   networking.networkmanager.enable = true;
   systemd.services.NetworkManager-wait-online.enable = false;
+  
+  services.postgresql.enable = true;
+  services.postgresql.package = pkgs.postgresql_16;
 
   system.autoUpgrade = {
     enable = config.var.autoUpgrade;
@@ -91,7 +94,7 @@ in {
     appimage-run
     age
     /*     (modrinth-app.overrideAttrs (oldAttrs: {
-			buildCommand = 
+			buildCommand =
 				''
 					gappsWrapperArgs+=(
 						--set GDK_BACKEND x11

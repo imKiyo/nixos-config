@@ -2,7 +2,7 @@
 
   imports = [
 
-    
+
     inputs.vicinae.homeManagerModules.default
     # Mostly user-specific configuration
     ./variables.nix
@@ -15,7 +15,7 @@
     ../../home/programs/git
     #../../home/programs/nextcloud
     ../../home/programs/thunar # file manager
-    ../../home/programs/lazygit 
+    ../../home/programs/lazygit
     ../../home/programs/zen
     ../../home/programs/duckduckgo-colorscheme
     ../../home/programs/discord
@@ -68,11 +68,14 @@
       jq
       just
       pnpm
+      ffmpeg
+      postgresql
 
       # Unpacking
       zip
       unzip
       unrar
+      niri
 
       # Utils
       optipng # PNG optimizer that recompresses image files to a smaller size
@@ -99,7 +102,6 @@
       #dotool
       xautoclick
       yt-dlp
-      ffmpeg
       rmpc
       picard
       spotdl
@@ -136,6 +138,10 @@
       material-symbols
       n8n
       scanmem # Its like a Cheat Engine but in a terminal
+      devilutionx
+
+      zed-editor
+
     ];
 
     # Import my profile picture, used by the hyprpanel dashboard
@@ -143,29 +149,30 @@
 
     # Don't touch this
     stateVersion = "24.05";
-    
+
   };
-  
+
+  stylix.targets.vicinae.enable = false;
   services.vicinae = {
-    enable = true;
-    autoStart = true;
-    useLayerShell = false;
-    settings = {
-        window = {
-          exclusiveZone = false;
-        };
-      faviconService = "twenty"; # twenty | google | none
-      font.size = 11;
-      popToRootOnClose = false;
-      rootSearch.searchFiles = false;
-      theme.name = "vicinae-dark";
-      window = {
-        csd = true;
-        opacity = 0.95;
-        rounding = 10;
+      enable = true;
+      systemd = {
+            enable = true; # default: false
+            autoStart = true; # default: false
+      };
+      # Removed autoStart and useLayerShell as they are causing "does not exist" errors
+      settings = {
+          window = {
+            exclusiveZone = false;
+            csd = true;
+            opacity = 0.95;
+            rounding = 10;
+          };
+        faviconService = "twenty";
+        font.size = 11;
+        popToRootOnClose = false;
+        rootSearch.searchFiles = false;
       };
     };
-  };
 
   programs.home-manager.enable = true;
 

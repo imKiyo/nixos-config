@@ -1,10 +1,12 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 let
   username = config.var.git.username;
   email = config.var.git.email;
 in {
   programs.git = {
     enable = true;
+
+    package = pkgs.gitFull;
 
     ignores = [
       ".cache/"
@@ -30,7 +32,7 @@ in {
       color.ui = "1";
       credential.helper = "libsecret";
       core.sshCommand = "ssh -i /home/kiyo/.ssh/id_ed25519";
-      
+
       alias = {
         essa = "push --force";
         co = "checkout";

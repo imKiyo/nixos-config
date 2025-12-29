@@ -12,7 +12,7 @@ let
 in {
 
   imports =
-    [ ./animations.nix ./bindings.nix ./polkitagent.nix ./hyprspace.nix ];
+    [ ./animations.nix ./bindings.nix ./polkitagent.nix ];
 
   home.packages = with pkgs; [
     qt5.qtwayland #
@@ -60,7 +60,7 @@ in {
         #"DVI-I-1,1680x1050@60,auto,1,transform,1"
       ];
 
-      workspace = [ 
+      workspace = [
         "HDMI-A-3,1"
         #dvi still is assigned to 1 and also acts as the main display
         "DVI-I-1,6"
@@ -120,7 +120,7 @@ in {
           size = 18;
         };
       };
-      
+
       dwindle = {
         force_split = 2;
         special_scale_factor = 1.0;
@@ -142,7 +142,7 @@ in {
         disable_splash_rendering = true;
         disable_autoreload = true;
         focus_on_activate = true;
-        
+
         new_window_takes_over_fullscreen = 2;
       };
 
