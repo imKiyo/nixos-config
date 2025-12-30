@@ -1,7 +1,7 @@
 { lib, pkgs, config, ... }:
 let
   nvidiaDriverChannel =
-    config.boot.kernelPackages.nvidiaPackages.beta; # stable, latest, beta, etc.
+    config.boot.kernelPackages.nvidiaPackages.stable; # stable, latest, beta, etc.
 in {
 
   # Load nvidia driver for Xorg and Wayland
@@ -73,7 +73,7 @@ in {
       open = false;
       nvidiaSettings = true;
       powerManagement.enable =
-        true; # This can cause sleep/suspend to fail and saves entire VRAM to /tmp/
+        false; # This can cause sleep/suspend to fail and saves entire VRAM to /tmp/
       modesetting.enable = true;
       package = nvidiaDriverChannel;
 

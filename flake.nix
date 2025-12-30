@@ -4,7 +4,14 @@
   '';
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # PINNED: lock system nixpkgs to the exact commit that was used in your working state.
+    # This prevents your OS/kernel from drifting past the working kernel.
+    nixpkgs.url = "github:NixOS/nixpkgs/c23193b943c6c689d70ee98ce3128239ed9e32d1";
+
+    # Separate moving input for packages you want to update (apps, etc.).
+    # Update this input when you want newer user packages:
+    nixpkgs_unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     stylix.url = "github:danth/stylix";
