@@ -5,6 +5,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-pinned.url = "github:nixos/nixpkgs/e4da2520ff5a22533256663155a428a25a303429"; # Pinned to 25.11 release with kernel 6.17.7
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     stylix.url = "github:danth/stylix";
@@ -36,14 +37,20 @@
 
   };
 
-  outputs = inputs@{ nixpkgs, ... }: {
+  outputs = inputs@{ nixpkgs, nixpkgs-pinned, ... }: {
     nixosConfigurations = {
       nixos =
         # CHANGEME: This should match the 'hostname' in your variables.nix file
         nixpkgs.lib.nixosSystem {
           modules = [
             {
-              _module.args = { inherit inputs; };
+              _module.args = {
+                inherit inputs;
+                pkgs-pinned = import nixpkgs-pinned {
+                  system = "x86_64-linux";
+                  config.allowUnfree = true;
+                };
+              };
               nixpkgs.hostPlatform = "x86_64-linux";  # ← Moved inside here
             }
             #inputs.nixos-hardware.nixosModules.omen-16-n0005ne # CHANGEME: check https://github.com/NixOS/nixos-hardware
