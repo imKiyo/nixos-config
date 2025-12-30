@@ -1,6 +1,6 @@
-{ config, pkgs, inputs, pkgs-pinned, ... }: {
+{ config, pkgs, inputs, ... }: {
   # Lock the kernel to a specific version to maintain compatibility with the NVIDIA driver.
-  boot.kernelPackages = pkgs-pinned.linuxPackages_6_17;
+  boot.kernelPackages = pkgs.linuxPackages_6_17;
 
   imports = [
     # Mostly system related configuration
@@ -30,7 +30,7 @@
   };
 
   # Don't touch this
-  system.stateVersion = "25.11";
+  system.stateVersion = "24.05";
 
   # Enable the NVIDIA hardware support
   hardware.steam-hardware.enable = true;
