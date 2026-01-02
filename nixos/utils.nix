@@ -9,7 +9,7 @@ in {
 
   networking.networkmanager.enable = true;
   systemd.services.NetworkManager-wait-online.enable = false;
-  
+
   services.postgresql.enable = true;
   services.postgresql.package = pkgs.postgresql_16;
 
@@ -90,7 +90,7 @@ in {
     sops
     #isc-dhcp
     #gfn-electron
-    retroarch-full
+    #retroarch-full
     appimage-run
     age
     /*     (modrinth-app.overrideAttrs (oldAttrs: {

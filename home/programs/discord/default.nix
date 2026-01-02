@@ -5,7 +5,7 @@
   # imports = [ inputs.nixcord.homeModules.default ]; # <-- if the module is named 'default.nix' inside 'homeModules'
   # OR, if 'nixcord' itself is the module at the top level of homeModules:
   # imports = [ inputs.nixcord.homeModules ]; # <-- if the module is the directory itself
-  
+
   programs.nixcord = {
     enable = true;
     config = { frameless = true; };

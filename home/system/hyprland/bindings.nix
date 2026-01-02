@@ -2,7 +2,7 @@
   wayland.windowManager.hyprland.settings = {
     bind = [
       "$mod,T, exec, ${pkgs.kitty}/bin/kitty" # Kitty
-      "$mod,E, exec, ${pkgs.xfce.thunar}/bin/thunar" # Thunar
+      "$mod,E, exec, ${pkgs.thunar}/bin/thunar" # Thunar
       #"$mod,F, exec, /etc/profiles/per-user/kiyo/bin/zen" # Zen Browser
       "$mod,F, exec, zen-beta" # Zen Browser
       #"$mod,K, exec, ${pkgs.bitwarden}/bin/bitwarden" # Bitwarden
@@ -20,7 +20,7 @@
       #"$mod,G, toggleoppacity" # Toggle Opaque Windows
       "$mod,S, pin" # Pin Window
       "$mod,mouse:273, movetoworkspace, empty" # Move Window to Workspace (MouseRightClick)
-      
+
 
       "$mod,Q, killactive," # Close window
       "$mod,W, togglefloating," # Toggle Floating
@@ -54,7 +54,7 @@
         "$mod,code:1${toString i}, workspace, ${toString ws}"
         "$mod SHIFT,code:1${toString i}, movetoworkspace, ${toString ws}"
       ]) 9));
-      
+
     bindm = [
       "$mod,mouse:272, movewindow" # Move Window (mouse)
       "$mod,R, resizewindow" # Resize Window (mouse)

@@ -18,6 +18,9 @@ in {
       "nvidia_drm.fbdev=1"
       "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
     ];
+
+  boot.blacklistedKernelModules = [ "nouveau" "nova_core" ];
+
   environment.variables = {
     GBM_BACKEND = "nvidia-drm"; # If crash in firefox, remove this line
     LIBVA_DRIVER_NAME = "nvidia"; # hardware acceleration

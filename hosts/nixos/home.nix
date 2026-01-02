@@ -130,7 +130,6 @@
         numpy
       ]))
       cava
-      itch
       bluez
       ddcutil
       brightnessctl

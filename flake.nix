@@ -6,7 +6,8 @@
   inputs = {
     # PINNED: lock system nixpkgs to the exact commit that was used in your working state.
     # This prevents your OS/kernel from drifting past the working kernel.
-    nixpkgs.url = "github:NixOS/nixpkgs/c23193b943c6c689d70ee98ce3128239ed9e32d1";
+    #nixpkgs.url = "github:NixOS/nixpkgs/c23193b943c6c689d70ee98ce3128239ed9e32d1";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Separate moving input for packages you want to update (apps, etc.).
     # Update this input when you want newer user packages:
