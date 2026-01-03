@@ -267,11 +267,11 @@ in
       Mod+G { spawn "Telegram"; }
       Mod+Shift+Ctrl+C { spawn "${terminal}" "claude"; }
       Ctrl+Mod+N { spawn "obsidian"; }
-      Mod+B { spawn "${browser}"; }
+      Mod+F { spawn "${browser}"; }
       Mod+D { spawn "vesktop"; }
       //Mod+S { spawn "steam"; }
       Mod+Shift+O { spawn "obs"; }
-      Mod+F { spawn "zed-fix"; }
+      Mod+Z { spawn "zed-fix"; }
       Mod+E { spawn "thunar"; }
       Ctrl+Mod+V { spawn "virt-manager"; }
       Ctrl+Mod+E { spawn "emopicker9000"; }
