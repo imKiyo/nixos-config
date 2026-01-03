@@ -76,10 +76,10 @@ in
       fi
 
       # Launch fastfetch on first terminal spawn
-      if [[ -z "$FASTFETCH_LAUNCHED" ]]; then
-        export FASTFETCH_LAUNCHED=1
-        fastfetch
-      fi
+      #if [[ -z "$FASTFETCH_LAUNCHED" ]]; then
+      #  export FASTFETCH_LAUNCHED=1
+      #  fastfetch
+      #fi
     '';
 
     shellAliases = {

@@ -1,6 +1,6 @@
 {
   programs.fastfetch = {
-    enable = false;
+    enable = true;
 
     settings = {
       display = {

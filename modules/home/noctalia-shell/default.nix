@@ -110,7 +110,7 @@ in
                 id = "Volume";
               }
               {
-                customIconPath = "/home/don/kiyo-os/modules/home/fastfetch/blackdontrans.png";
+                customIconPath = "/home/don/kiyo-os/modules/home/fastfetch/nixos.png";
                 icon = "noctalia";
                 id = "ControlCenter";
                 useDistroLogo = false;
@@ -202,7 +202,7 @@ in
         general = {
           animationDisabled = false;
           animationSpeed = 1;
-          avatarImage = "/home/don/kiyo-os/modules/home/fastfetch/blackdontrans.png";
+          avatarImage = "/home/don/kiyo-os/modules/home/fastfetch/nixos.png";
           compactLockScreen = false;
           dimDesktop = true;
           forceBlackScreenCorners = false;
