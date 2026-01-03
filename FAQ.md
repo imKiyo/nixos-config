@@ -1,12 +1,12 @@
-# 💬 Black-Don-OS FAQ
+# 💬 kiyo-os FAQ
 
-Welcome to the Black-Don-OS FAQ! This guide covers common questions and solutions for managing your Black-Don-OS system.
+Welcome to the kiyo-os FAQ! This guide covers common questions and solutions for managing your kiyo-os system.
 
 ## 🚀 Getting Started
 
-### **❄ What is Black-Don-OS?**
+### **❄ What is kiyo-os?**
 
-Black-Don-OS is a customized NixOS configuration designed for multi-host environments with a focus on NVIDIA GPU support and modern desktop experiences. It's built on the foundation of ZaneyOS but tailored for Don's specific workflow and sharing on YouTube.
+kiyo-os is a customized NixOS configuration designed for multi-host environments with a focus on NVIDIA GPU support and modern desktop experiences. It's built on the foundation of ZaneyOS but tailored for Don's specific workflow and sharing on YouTube.
 
 **Key Features:**
 - Multi-host configuration management
@@ -18,7 +18,7 @@ Black-Don-OS is a customized NixOS configuration designed for multi-host environ
 
 ### **🔧 What is dcli?**
 
-The `dcli` utility is a command-line tool designed to simplify managing your Black-Don-OS environment. It provides a comprehensive set of commands for performing common tasks like building configurations, managing hosts, and system maintenance.
+The `dcli` utility is a command-line tool designed to simplify managing your kiyo-os environment. It provides a comprehensive set of commands for performing common tasks like building configurations, managing hosts, and system maintenance.
 
 **Common dcli commands:**
 ```bash
@@ -33,13 +33,13 @@ dcli update              # Update flake and rebuild system
 **Full dcli help:**
 ```bash
 ❯ dcli
-Black-Don-OS CLI Utility -- version 1.0
+kiyo-os CLI Utility -- version 1.0
 
 Usage: dcli [command] [options]
 
 Commands:
   build <host>    - Build configuration for specific host
-  deploy <host>   - Build and switch to configuration  
+  deploy <host>   - Build and switch to configuration
   status          - Show current system status
   list-hosts      - List available host configurations
   cleanup         - Clean up old system generations
@@ -54,7 +54,7 @@ Examples:
 
 ## 🏠 Host Management
 
-### **🖥️ How do I add a new computer to my Black-Don-OS setup?**
+### **🖥️ How do I add a new computer to my kiyo-os setup?**
 
 Use the automated setup script:
 
@@ -77,17 +77,17 @@ You can switch configurations using either dcli or standard NixOS commands:
 dcli deploy nix-desktop
 
 # Using standard NixOS rebuild
-sudo nixos-rebuild switch --flake ~/black-don-os#nix-desktop
+sudo nixos-rebuild switch --flake ~/kiyo-os#nix-desktop
 ```
 
-### **🔄 How do I update my Black-Don-OS system?**
+### **🔄 How do I update my kiyo-os system?**
 
 ```bash
 # Update everything with dcli
 dcli update
 
 # Or manually
-cd ~/black-don-os
+cd ~/kiyo-os
 nix flake update
 sudo nixos-rebuild switch --flake .#your-hostname
 ```
@@ -209,9 +209,9 @@ terminal = "wezterm";  # Options: kitty, alacritty, wezterm, ghostty
 
 ### **📝 How do I configure development environments?**
 
-Black-Don-OS includes a Flutter development environment. Access it with:
+kiyo-os includes a Flutter development environment. Access it with:
 ```bash
-cd ~/black-don-os
+cd ~/kiyo-os
 nix develop
 ```
 
@@ -271,7 +271,7 @@ sudo nix-collect-garbage -d
 dcli build your-hostname
 
 # Or manually
-nixos-rebuild build --flake ~/black-don-os#your-hostname
+nixos-rebuild build --flake ~/kiyo-os#your-hostname
 ```
 
 ### **🔄 How do I contribute or share my modifications?**
@@ -285,22 +285,22 @@ Or share your configuration as inspiration for others!
 
 ### **📋 How do I back up my configuration?**
 
-Your entire configuration is in `~/black-don-os/`. Simply:
+Your entire configuration is in `~/kiyo-os/`. Simply:
 ```bash
 # Git-based backup
-cd ~/black-don-os
+cd ~/kiyo-os
 git add -A
 git commit -m "Backup my configuration"
 git push
 
 # Or copy the directory
-cp -r ~/black-don-os ~/black-don-os-backup-$(date +%Y%m%d)
+cp -r ~/kiyo-os ~/kiyo-os-backup-$(date +%Y%m%d)
 ```
 
 ## ❓ Still Need Help?
 
 ### **📚 Documentation Resources:**
-- `README-BLACK-DON-OS.md` - Main documentation
+- `README-kiyo-os.md` - Main documentation
 - `dcli.md` - Complete dcli reference
 - `INSTALL-TROUBLESHOOTING.md` - Installation help
 
@@ -315,4 +315,4 @@ cp -r ~/black-don-os ~/black-don-os-backup-$(date +%Y%m%d)
 
 ---
 
-**Note:** Black-Don-OS is based on ZaneyOS and continues to evolve. This FAQ covers the Black-Don-OS specific features and changes.
+**Note:** kiyo-os is based on ZaneyOS and continues to evolve. This FAQ covers the kiyo-os specific features and changes.

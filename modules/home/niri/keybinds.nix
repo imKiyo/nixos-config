@@ -256,7 +256,7 @@ in
 
       // === Noctalia Config Sync ===
       Ctrl+Shift+S {
-          spawn "sh" "-c" "/home/don/black-don-os/modules/home/noctalia-shell/sync-from-gui.py && notify-send 'Noctalia Config' 'Settings synced to Nix template' -i preferences-system";
+          spawn "sh" "-c" "/home/don/kiyo-os/modules/home/noctalia-shell/sync-from-gui.py && notify-send 'Noctalia Config' 'Settings synced to Nix template' -i preferences-system";
       }
 
       // === System Controls ===
@@ -269,7 +269,7 @@ in
       Ctrl+Mod+N { spawn "obsidian"; }
       Mod+B { spawn "${browser}"; }
       Mod+D { spawn "vesktop"; }
-      Mod+S { spawn "steam"; }
+      //Mod+S { spawn "steam"; }
       Mod+Shift+O { spawn "obs"; }
       Mod+F { spawn "zed-fix"; }
       Mod+E { spawn "thunar"; }

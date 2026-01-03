@@ -437,14 +437,14 @@ cat > "INSTALL-$newHostName.md" << EOF
 ### 2. Clone Black Don OS configuration
 \`\`\`bash
 # Clone the repository
-git clone https://gitlab.com/theblackdon/black-don-os.git
-cd black-don-os
+git clone https://gitlab.com/theblackdon/kiyo-os.git
+cd kiyo-os
 \`\`\`
 
 ### 3. Run the installation script
 \`\`\`bash
 # Make sure your hostname matches: $newHostName
-./install-black-don-os.sh
+./install-kiyo-os.sh
 \`\`\`
 
 ### 4. Post-installation configuration

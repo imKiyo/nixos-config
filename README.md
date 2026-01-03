@@ -4,9 +4,9 @@ NixOS configuration based on [ZaneyOS](https://gitlab.com/zaney/zaneyos), design
 
 
 ### Message from the author:
-Thanks for your interest in my nixos configuration. 
-Please note this config has not been receiving regular updates as I do not use this config on a daily basis. 
-If you are un formiliar with nixos I would suggest starting with a simpler config. You may have to do some troubleshooting if you install this config. 
+Thanks for your interest in my nixos configuration.
+Please note this config has not been receiving regular updates as I do not use this config on a daily basis.
+If you are un formiliar with nixos I would suggest starting with a simpler config. You may have to do some troubleshooting if you install this config.
 
 ![Black Don OS Desktop](img/desktop-screenshot.png)
 
@@ -95,8 +95,8 @@ Black Don OS installs directly on your hardware, replacing or dual-booting with 
 
 4. **Clone and run the Black Don OS installer**:
    ```bash
-   git clone https://gitlab.com/theblackdon/black-don-os
-   cd black-don-os
+   git clone https://gitlab.com/theblackdon/kiyo-os
+   cd kiyo-os
    ./install.sh
    ```
 
@@ -133,7 +133,7 @@ The installer will:
 After installation, customize your system by editing:
 
 ```bash
-~/black-don-os/hosts/YOUR-HOSTNAME/variables.nix
+~/kiyo-os/hosts/YOUR-HOSTNAME/variables.nix
 ```
 
 ### Common Customizations
@@ -210,7 +210,7 @@ Black Don OS automatically detects and configures:
 ## 📁 Project Structure
 
 ```
-black-don-os/
+kiyo-os/
 ├── hosts/              # Your host configurations
 │   ├── YOUR-HOST/      # Your computer's config
 │   └── default/        # Template for new hosts
@@ -244,7 +244,7 @@ They can have completely different settings, packages, and features enabled.
 ### Updating Your System
 
 ```bash
-cd ~/black-don-os
+cd ~/kiyo-os
 dcli pull      # Pull latest changes
 dcli update    # Update flake inputs and rebuild
 # or use the alias:
@@ -261,7 +261,7 @@ If the build fails, try:
 dcli diag
 
 # Rebuild with detailed output
-sudo nixos-rebuild switch --flake ~/black-don-os#YOUR-HOSTNAME --show-trace
+sudo nixos-rebuild switch --flake ~/kiyo-os#YOUR-HOSTNAME --show-trace
 ```
 
 ### Monitor Not Working

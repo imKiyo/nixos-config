@@ -167,7 +167,7 @@ dcli deploy nix-desktop
 
 dcli automatically detects:
 - **Current Host**: From the system hostname
-- **Project Directory**: `~/black-don-os`
+- **Project Directory**: `~/kiyo-os`
 - **Available Hosts**: From the `hosts/` directory
 - **Current Profile**: From your flake configuration
 
@@ -197,7 +197,7 @@ If you get "Host not found" errors:
 ### Permission Issues
 Some commands require sudo privileges:
 - `dcli rebuild`
-- `dcli deploy [HOST]` 
+- `dcli deploy [HOST]`
 - `dcli trim`
 
 ### Git Issues

@@ -1,12 +1,12 @@
-# Black-Don-OS Changelog
+# kiyo-os Changelog
 
-## Black-Don-OS v1.0 -- Initial Release
+## kiyo-os v1.0 -- Initial Release
 
 **Release Date:** January 2025
 
-### 🎉 Initial Black-Don-OS Release
+### 🎉 Initial kiyo-os Release
 
-Black-Don-OS is a customized NixOS configuration based on ZaneyOS, tailored for Don's specific needs and designed for easy sharing and deployment across multiple hosts.
+kiyo-os is a customized NixOS configuration based on ZaneyOS, tailored for Don's specific needs and designed for easy sharing and deployment across multiple hosts.
 
 ### ✨ Key Features
 
@@ -33,7 +33,7 @@ Black-Don-OS is a customized NixOS configuration based on ZaneyOS, tailored for 
 
 - **setup-new-host.sh**: Automated script for adding new host configurations
 - **switch-host.sh**: Easy switching between host configurations
-- **install-black-don-os.sh**: New installation script (replaces install-zaneyos.sh)
+- **install-kiyo-os.sh**: New installation script (replaces install-zaneyos.sh)
 
 ### 📦 Package Updates
 
@@ -45,7 +45,7 @@ Black-Don-OS is a customized NixOS configuration based on ZaneyOS, tailored for 
 
 ### 🎨 Visual Enhancements
 
-- Custom Black-Don-OS branding in fastfetch
+- Custom kiyo-os branding in fastfetch
 - Enhanced wallpaper collection (60+ wallpapers)
 - Multiple Waybar themes (ddubs, dwm, simple, curved, etc.)
 - Improved Hyprland animations and window rules
@@ -59,14 +59,14 @@ Black-Don-OS is a customized NixOS configuration based on ZaneyOS, tailored for 
 
 ### 📚 Documentation
 
-- **README-BLACK-DON-OS.md**: Comprehensive setup and usage guide
+- **README-kiyo-os.md**: Comprehensive setup and usage guide
 - **dcli.md**: Complete dcli documentation
 - **INSTALL-TROUBLESHOOTING.md**: Installation troubleshooting guide
 - **INSTALL-nix-desktop.md**: Specific installation guide for desktop setup
 
 ### 🏗️ Installation & Setup
 
-- New automated installation script that correctly points to Black-Don-OS repository
+- New automated installation script that correctly points to kiyo-os repository
 - Improved hardware detection and configuration
 - Better error handling and user guidance
 - Automated host configuration setup
@@ -82,7 +82,7 @@ Black-Don-OS is a customized NixOS configuration based on ZaneyOS, tailored for 
 
 ## Based on ZaneyOS
 
-Black-Don-OS is built upon the excellent foundation provided by ZaneyOS (originally by Don Williams). Key changes include:
+kiyo-os is built upon the excellent foundation provided by ZaneyOS (originally by Don Williams). Key changes include:
 
 - Multi-host architecture for managing multiple computers
 - NVIDIA-focused optimizations
@@ -93,9 +93,9 @@ Black-Don-OS is built upon the excellent foundation provided by ZaneyOS (origina
 ### Credits
 
 - Original ZaneyOS by Don Williams
-- Black-Don-OS customizations by Black Don
+- kiyo-os customizations by Black Don
 - Community contributions and feedback
 
 ---
 
-**Note**: This is the initial release of Black-Don-OS as a standalone project. Future releases will focus on continued improvements, new features, and community feedback integration.
+**Note**: This is the initial release of kiyo-os as a standalone project. Future releases will focus on continued improvements, new features, and community feedback integration.
