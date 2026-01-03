@@ -53,7 +53,7 @@
   defaultShell = "zsh"; # Options: "fish" or "zsh"
 
   # Theming
-  stylixImage = ./wallpapers/wife2.jpg;
+  stylixImage = ../../wallpapers/wife2.jpg;
   #waybarChoice = ../../modules/home/waybar/waybar-ddubs.nix;  # Waybar temporarily disabled
   animChoice = ../../modules/home/hyprland/animations-end4.nix;
 
