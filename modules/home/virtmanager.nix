@@ -1,14 +1,15 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [
     # Additional VM management tools
     spice-gtk # Better VM display performance
-    win-virtio # Windows guest drivers (for testing Windows)
+    virtio-win # Windows guest drivers (for testing Windows)
   ];
 
   dconf.settings = {
     "org/virt-manager/virt-manager/connections" = {
-      autoconnect = ["qemu:///system"];
-      uris = ["qemu:///system"];
+      autoconnect = [ "qemu:///system" ];
+      uris = [ "qemu:///system" ];
     };
 
     # Virt-manager preferences for better distro testing
@@ -33,7 +34,7 @@
 
     # Console settings
     "org/virt-manager/virt-manager/urls" = {
-      isos = ["/var/lib/libvirt/isos"]; # Default ISO location
+      isos = [ "/var/lib/libvirt/isos" ]; # Default ISO location
     };
   };
 }

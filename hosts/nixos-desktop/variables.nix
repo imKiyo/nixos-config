@@ -9,6 +9,7 @@
   # Monitor Settings (update after installation for your displays)
   extraMonitorSettings = ''
     "monitor=HDMI-A-3,1920x1080@60,0x0,1"
+    "monitor=DVI-I-1,1680x1050@60,-1050x0,1,transform,1"
   '';
 
   # Waybar Settings
