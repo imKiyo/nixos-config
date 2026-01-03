@@ -120,7 +120,7 @@ in
 
       // === Window Management ===
       Mod+Q repeat=false { close-window; }
-      Mod+Alt+F { maximize-column; }
+      Mod+A { maximize-column; }
       Mod+Shift+F { fullscreen-window; }
       Mod+W { toggle-window-floating; }
       Mod+Ctrl+W { switch-focus-between-floating-and-tiling; }
@@ -271,8 +271,8 @@ in
       Mod+D { spawn "vesktop"; }
       Mod+S { spawn "steam"; }
       Mod+Shift+O { spawn "obs"; }
-      Mod+Z { spawn "zed-fix"; }
-      Mod+F { spawn "thunar"; }
+      Mod+F { spawn "zed-fix"; }
+      Mod+E { spawn "thunar"; }
       Ctrl+Mod+V { spawn "virt-manager"; }
       Ctrl+Mod+E { spawn "emopicker9000"; }
 

@@ -65,6 +65,12 @@
           username = "user";
         };
 
+        nixos-desktop = mkHost {
+          hostname = "nixos-desktop";
+          profile = "nvidia";
+          username = "kiyo";
+        };
+
         nix-tester = mkHost {
           hostname = "nix-tester";
           profile = "intel";
