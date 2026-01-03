@@ -12,7 +12,7 @@
       };
 
       logo = {
-        source = ./blackdontrans.png;
+        source = ./nixos.png;
         type = "kitty-direct";
         height = 10;
         width = 20;
@@ -26,7 +26,7 @@
         "break"
         {
           type = "os";
-          key = "OS - BlackDon's OS";
+          key = "OS - kiyo's OS";
           keyColor = "31";
         }
         {

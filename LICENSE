@@ -1,8 +1,8 @@
 MIT License
 
 Copyright (c) 2024 Tyler Kelley (Original ZaneyOS)
-Copyright (c) 2025 Black Don (kiyo-os modifications)
-
+Copyright (c) 2025 Black Don (Black-Don-OS modifications)
+Copyright (c) 2026 kiyo (kiyo-os modifications)
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -28,4 +28,5 @@ MIT license. This project includes modifications and enhancements specifically
 tailored for multi-host NVIDIA-focused environments and YouTube content creation.
 
 Original ZaneyOS: https://gitlab.com/zaney/zaneyos
-kiyo-os: https://gitlab.com/theblackdon/kiyo-os
+Black-Don-OS: https://gitlab.com/theblackdon/Black-Don-OS
+KiyoOS https://github.com/imkiyo/kiyo-os
