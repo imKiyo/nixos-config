@@ -102,8 +102,8 @@ in
       Mod+Return { spawn "${terminal}"; }
       Mod+Y { spawn "fuzzel"; }
       Mod+A { spawn ${launcherCommand}; }
-      Mod+Space { spawn "vicinae open"; }
-      Mod+Shift+V { spawn "vicinae vicinae://extensions/vicinae/clipboard/history"; }
+      Mod+Space { spawn "vicinae" "open"; }
+      Mod+Shift+V { spawn "vicinae" "vicinae://extensions/vicinae/clipboard/history"; }
 
       ${noctaliaKeybinds}
       ${dmsKeybinds}
