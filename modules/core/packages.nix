@@ -45,7 +45,6 @@
     appimage-run # Needed For AppImage Support
     bottom # btop like util
     brightnessctl # For Screen Brightness Control
-    cmatrix # Matrix Movie Effect In Terminal
     cowsay # Great Fun Terminal Program
     docker-compose # Allows Controlling Docker From A Single File
     duf # Utility For Viewing Disk Usage In Terminal
@@ -83,7 +82,7 @@
     picard # For Changing Music Metadata & Getting Cover Art
     pkg-config # Wrapper Script For Allowing Packages To Get Info On Others
     playerctl # Allows Changing Media Volume Through Scripts
-    rhythmbox
+    rhythmbox # One-stop multimedia application
     ripgrep # Improved Grep
     socat # Needed For Screenshots
     sox # audio support for FFMPEG
@@ -95,11 +94,18 @@
     wget # Tool For Fetching Files With Links
     xwayland-satellite # Xwayland outside your Wayland compositor
     ytmdl # Tool For Downloading Audio From YouTube
+    #yt-dlp # yt vid downloader - check if its replaced by ytmdl above this
     nwg-displays # Manage Displays
     nwg-drawer # drawer GUI
     nwg-look # Look GUI
     rofi-emoji # rofi-emoji-wayland merged into rofi-emoji in nixpkgs-unstable
-    youtube-music
+    #youtube-music -checking if i need this
+    scanmem # Its like a Cheat Engine but in a terminal
+    bambu-studio # 3d printer software
+    blockbench # A low-poly 3D model editor (Hytale model editor)
+    vicinae # Launcher for your desktop
+    lsfg-vk # Lossless Scaling
+    lsfg-vk-ui # Lossless Scaling with UI
     zen-browser # Default browser
     # Development Tools
     zed-editor # Code editor with AI features

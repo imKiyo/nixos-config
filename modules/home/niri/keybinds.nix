@@ -101,7 +101,9 @@ in
       Mod+T { spawn "${terminal}"; }
       Mod+Return { spawn "${terminal}"; }
       Mod+Y { spawn "fuzzel"; }
-      Mod+Space { spawn ${launcherCommand}; }
+      Mod+A { spawn ${launcherCommand}; }
+      Mod+Space { spawn "vicinae"; }
+      Mod+Shift+V { spawn "vicinae vicinae://extensions/vicinae/clipboard/history"; }
 
       ${noctaliaKeybinds}
       ${dmsKeybinds}
@@ -120,7 +122,7 @@ in
 
       // === Window Management ===
       Mod+Q repeat=false { close-window; }
-      Mod+A { maximize-column; }
+      Mod+Shift+A { maximize-column; }
       Mod+Shift+F { fullscreen-window; }
       Mod+W { toggle-window-floating; }
       Mod+Ctrl+W { switch-focus-between-floating-and-tiling; }
