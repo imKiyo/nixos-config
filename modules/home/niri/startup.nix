@@ -22,5 +22,5 @@ in
   spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
   spawn-at-startup "vesktop"
   spawn-at-startup "Telegram"
-  spawn-at-startup "vicinae server"
+  spawn-at-startup "vicinae" "server"
 ''
