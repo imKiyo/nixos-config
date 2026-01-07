@@ -107,6 +107,8 @@
     lsfg-vk # Lossless Scaling
     lsfg-vk-ui # Lossless Scaling with UI
     zen-browser # Default browser
+    obsidian # Giga note app
+
     # Development Tools
     zed-editor # Code editor with AI features
     popsicle
