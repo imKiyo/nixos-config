@@ -6,5 +6,6 @@
     devilutionx # Diablo 1 runner
     bambu-studio # 3d printer software
     yt-dlp # yt vid downloader
+    blockbench # A low-poly 3D model editor (Hytale model editor)
   ];
 }

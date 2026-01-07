@@ -13,6 +13,12 @@ in
     enable = mkEnableOption "Enable Nvidia Drivers";
   };
   config = mkIf cfg.enable {
+    # 1. Enable hardware graphics (Crucial for OpenGL/Minecraft)
+    hardware.graphics = {
+      enable = true;
+      enable32Bit = true; # Required for many older games/launchers
+    };
+
     boot.blacklistedKernelModules = [
       "nouveau"
       "nova_core"
