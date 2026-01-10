@@ -1,5 +1,6 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [fish];
+{ pkgs, ... }:
+{
+  home.packages = with pkgs; [ fish ];
 
   home.file."./.fishrc-personal".text = ''
     # This file allows you to define your own Fish shell customizations
@@ -7,7 +8,7 @@
 
     # Environment variables
     set -gx CHROME_EXECUTABLE /run/current-system/sw/bin/google-chrome-stable
-    set -gx BROWSER "flatpak run app.zen_browser.zen"
+    # set -gx BROWSER "flatpak run app.zen_browser.zen"
     set -gx EDITOR "zeditor"
     # set -gx VISUAL "nvim"
 
