@@ -2,44 +2,26 @@
 {
   xdg.portal = {
     enable = true;
+    xdgOpenUsePortal = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-gnome
     ];
-    config = {
-      common = {
-        default = [
-          "gnome"
-          "gtk"
-        ];
-      };
-      hyprland = {
-        default = [
-          "hyprland"
-          "gtk"
-        ];
-        "org.freedesktop.impl.portal.FileChooser" = "gtk";
-        "org.freedesktop.impl.portal.ScreenCast" = "hyprland";
-        "org.freedesktop.impl.portal.Screenshot" = "hyprland";
-      };
-      niri = {
-        default = [
-          "gnome"
-          "gtk"
-        ];
-        "org.freedesktop.impl.portal.FileChooser" = "gtk";
-        "org.freedesktop.impl.portal.ScreenCast" = "gnome";
-        "org.freedesktop.impl.portal.Screenshot" = "gnome";
-      };
+    config.niri = {
+      default = [ "gtk" ];
+      "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
     };
-    configPackages = [
-      pkgs.hyprland
-      pkgs.niri
-    ];
   };
+
+  # Override systemd service to set XDG_CURRENT_DESKTOP to include GNOME
+  # This tricks GTK portal into loading for niri
+  systemd.user.services.xdg-desktop-portal.Service.Environment = [
+    "XDG_CURRENT_DESKTOP=niri:GNOME"
+  ];
+
   services = {
-    flatpak.enable = true; # Enable Flatpak
+    flatpak.enable = true;
   };
+
   systemd.services.flatpak-repo = {
     wantedBy = [ "multi-user.target" ];
     path = [ pkgs.flatpak ];

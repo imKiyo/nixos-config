@@ -18,18 +18,22 @@
   services.displayManager.sessionPackages = [ pkgs.niri ];
 
   services.ollama = {
-      enable = true;
-      package = pkgs.ollama-cuda.override {
-        cudaArches = [ "52" ];
-      };
-      loadModels = [ "dolphin-llama3:8b" ];
-    };
+    enable = true;
+    # We use overrideAttrs to manually set the GPU architecture to 5.2 (Maxwell)
+    package = pkgs.ollama-cuda.overrideAttrs (oldAttrs: {
+      cmakeFlags = (oldAttrs.cmakeFlags or [ ]) ++ [
+        "-DCMAKE_CUDA_ARCHITECTURES=52"
+      ];
+    });
+
+    loadModels = [ "dolphin-llama3:8b" ];
 
     environmentVariables = {
-      # Forces Ollama to recognize Maxwell card's compute capability
       OLLAMA_CUDA_COMPUTE_CAPABILITIES = "5.2";
-      # Helps with memory management on older 4GB cards
-      OLLAMA_NOPRUNE = "1";
+      # Maxwell cards (GTX 900 series) crash with Flash Attention
+      OLLAMA_FLASH_ATTENTION = "0";
+      # Limits VRAM usage to help with the 970's 3.5GB/0.5GB split
+      OLLAMA_NUM_PARALLEL = "1";
     };
   };
 
