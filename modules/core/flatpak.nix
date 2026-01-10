@@ -14,9 +14,11 @@
 
   # Override systemd service to set XDG_CURRENT_DESKTOP to include GNOME
   # This tricks GTK portal into loading for niri
-  systemd.user.services.xdg-desktop-portal.Service.Environment = [
-    "XDG_CURRENT_DESKTOP=niri:GNOME"
-  ];
+  systemd.user.services.xdg-desktop-portal = {
+    serviceConfig = {
+      Environment = [ "XDG_CURRENT_DESKTOP=niri:GNOME" ];
+    };
+  };
 
   services = {
     flatpak.enable = true;
