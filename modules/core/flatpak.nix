@@ -20,6 +20,12 @@
     };
   };
 
+  systemd.user.services.xdg-desktop-portal-gtk = {
+    serviceConfig = {
+      Environment = [ "XDG_CURRENT_DESKTOP=niri:GNOME" ];
+    };
+  };
+
   services = {
     flatpak.enable = true;
   };
