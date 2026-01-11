@@ -9,6 +9,7 @@
     config.niri = {
       default = [ "gtk" ];
       "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
+      "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
     };
   };
 
