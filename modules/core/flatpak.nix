@@ -2,27 +2,52 @@
 {
   xdg.portal = {
     enable = true;
-    xdgOpenUsePortal = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
       pkgs.xdg-desktop-portal-gnome
     ];
-    config.niri = {
-      default = [ "gtk" ];
-      "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
-      "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
+    config = {
+      common = {
+        default = [
+          "gnome"
+          "gtk"
+        ];
+      };
+      hyprland = {
+        default = [
+          "hyprland"
+          "gtk"
+        ];
+        "org.freedesktop.impl.portal.FileChooser" = "gtk";
+        "org.freedesktop.impl.portal.ScreenCast" = "hyprland";
+        "org.freedesktop.impl.portal.Screenshot" = "hyprland";
+      };
+      niri = {
+        default = [
+          "gnome"
+          "gtk"
+        ];
+        "org.freedesktop.impl.portal.FileChooser" = "gtk";
+        "org.freedesktop.impl.portal.ScreenCast" = "gnome";
+        "org.freedesktop.impl.portal.Screenshot" = "gnome";
+        "org.freedesktop.impl.portal.Settings" = "gnome";
+        "org.freedesktop.impl.portal.OpenURI" = "gnome";
+      };
     };
+    configPackages = [
+      pkgs.hyprland
+      pkgs.niri
+    ];
   };
 
-  # Override systemd service to set XDG_CURRENT_DESKTOP to include GNOME
-  # This tricks GTK portal into loading for niri
+  # Override systemd services to trick GNOME portal into loading for niri
   systemd.user.services.xdg-desktop-portal = {
     serviceConfig = {
       Environment = [ "XDG_CURRENT_DESKTOP=niri:GNOME" ];
     };
   };
 
-  systemd.user.services.xdg-desktop-portal-gtk = {
+  systemd.user.services.xdg-desktop-portal-gnome = {
     serviceConfig = {
       Environment = [ "XDG_CURRENT_DESKTOP=niri:GNOME" ];
     };

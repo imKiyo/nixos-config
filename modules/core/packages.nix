@@ -108,6 +108,7 @@
     lsfg-vk-ui # Lossless Scaling with UI
     zen-browser # Default browser
     obsidian # Giga note app
+    nautilus # a thingy that should fix my issues with flatpak downloads and browser popouts
 
     # Development Tools
     zed-editor # Code editor with AI features
