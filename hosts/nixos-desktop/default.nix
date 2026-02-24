@@ -17,6 +17,8 @@
   # Ensure niri session is available to display manager
   services.displayManager.sessionPackages = [ pkgs.niri ];
 
+  services.ydotool.enable = true;
+
   services.ollama = {
     enable = true;
     # We use overrideAttrs to manually set the GPU architecture to 5.2 (Maxwell)

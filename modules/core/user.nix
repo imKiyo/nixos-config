@@ -53,6 +53,7 @@ in
       "scanner"
       "wheel" # sudo access
       "vboxusers" # For VirtualBox
+      "input" # For clicker scripts and so so
     ];
     # Use configured shell based on defaultShell variable
     shell = shellPackage;

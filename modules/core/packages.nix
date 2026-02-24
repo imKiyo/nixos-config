@@ -109,6 +109,14 @@
     zen-browser # Default browser
     obsidian # Giga note app
     nautilus # a thingy that should fix my issues with flatpak downloads and browser popouts
+    #prismlauncher # for mods, hopefully hytale stuff
+    gamescope
+    grim
+    ydotool
+    python3
+    python3Packages.opencv4
+    python3Packages.pillow
+    python3Packages.numpy
 
     # Development Tools
     zed-editor # Code editor with AI features
@@ -118,5 +126,8 @@
     gtk3
     gtk4
     localsend
+    jetbrains.idea
+    javaPackages.openjfx25
+
   ];
 }

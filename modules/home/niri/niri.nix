@@ -69,6 +69,7 @@ in
     wl-clipboard
     swappy
     xdg-desktop-portal-gnome
+    dotool
   ];
 
   # Generate Niri config.kdl

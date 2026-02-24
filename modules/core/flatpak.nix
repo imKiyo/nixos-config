@@ -11,6 +11,7 @@
         default = [
           "gnome"
           "gtk"
+          "wlt"
         ];
       };
       hyprland = {
