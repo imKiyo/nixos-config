@@ -128,6 +128,7 @@
     localsend
     jetbrains.idea
     javaPackages.openjfx25
+    vesktop
 
   ];
 }

@@ -17,7 +17,16 @@
   # Ensure niri session is available to display manager
   services.displayManager.sessionPackages = [ pkgs.niri ];
 
-  services.ydotool.enable = true;
+  environment.systemPackages = with pkgs; [ ydotool ];
+
+  systemd.user.services.ydotool = {
+    description = "ydotool daemon";
+    wantedBy = [ "default.target" ];
+    serviceConfig = {
+      ExecStart = "${pkgs.ydotool}/bin/ydotoold";
+      Restart = "always";
+    };
+  };
 
   services.ollama = {
     enable = true;

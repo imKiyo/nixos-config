@@ -70,6 +70,7 @@ in
     swappy
     xdg-desktop-portal-gnome
     dotool
+    bemenu
   ];
 
   # Generate Niri config.kdl
