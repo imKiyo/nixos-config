@@ -68,7 +68,7 @@ in
     slurp
     wl-clipboard
     swappy
-    xdg-desktop-portal-gnome
+    xdg-desktop-portal-wlr
     dotool
     bemenu
   ];
@@ -202,9 +202,9 @@ in
     Install.WantedBy = [ "graphical-session.target" ];
   };
 
-  systemd.user.services.xdg-desktop-portal-gnome = {
+  systemd.user.services.xdg-desktop-portal-wlr = {
     Unit = {
-      Description = "Portal service (GNOME implementation)";
+      Description = "Portal service (wlroots implementation)";
       After = [
         "graphical-session.target"
         "pipewire.service"
@@ -214,8 +214,8 @@ in
     };
     Service = {
       Type = "dbus";
-      BusName = "org.freedesktop.impl.portal.desktop.gnome";
-      ExecStart = "${pkgs.xdg-desktop-portal-gnome}/libexec/xdg-desktop-portal-gnome";
+      BusName = "org.freedesktop.impl.portal.desktop.wlr";
+      ExecStart = "${pkgs.xdg-desktop-portal-wlr}/libexec/xdg-desktop-portal-wlr";
       Restart = "on-failure";
       Environment = [
         "XDG_CURRENT_DESKTOP=niri"
@@ -246,16 +246,16 @@ in
     [preferred]
     default=gtk
     org.freedesktop.impl.portal.FileChooser=gtk
-    org.freedesktop.impl.portal.Screenshot=gnome
-    org.freedesktop.impl.portal.ScreenCast=gnome
+    org.freedesktop.impl.portal.Screenshot=wlr
+    org.freedesktop.impl.portal.ScreenCast=wlr
   '';
 
   xdg.configFile."xdg-desktop-portal/niri-portals.conf".text = ''
     [preferred]
     default=gtk
     org.freedesktop.impl.portal.FileChooser=gtk
-    org.freedesktop.impl.portal.Screenshot=gnome
-    org.freedesktop.impl.portal.ScreenCast=gnome
+    org.freedesktop.impl.portal.Screenshot=wlr
+    org.freedesktop.impl.portal.ScreenCast=wlr
   '';
 
   # Place wallpapers in home directory

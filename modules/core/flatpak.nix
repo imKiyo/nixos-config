@@ -2,9 +2,9 @@
 {
   xdg.portal = {
     enable = true;
+    xdgOpenUsePortal = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-wlr
       pkgs.xdg-desktop-portal-gnome
     ];
     config = {
@@ -12,7 +12,6 @@
         default = [
           "gnome"
           "gtk"
-          "wlt"
         ];
       };
       hyprland = {
@@ -20,40 +19,32 @@
           "hyprland"
           "gtk"
         ];
-        "org.freedesktop.impl.portal.FileChooser" = "gtk";
+        "org.freedesktop.impl.portal.FileChooser" = "gnome";
         "org.freedesktop.impl.portal.ScreenCast" = "hyprland";
         "org.freedesktop.impl.portal.Screenshot" = "hyprland";
       };
       niri = {
         default = [
-          "wlr"
+          "gnome"
           "gtk"
         ];
-        "org.freedesktop.impl.portal.ScreenCast" = "wlr";
-        "org.freedesktop.impl.portal.Screenshot" = "wlr";
+        "org.freedesktop.impl.portal.ScreenCast" = "gnome"; # wlr
+        "org.freedesktop.impl.portal.Screenshot" = "gnome"; # wlr
         "org.freedesktop.impl.portal.FileChooser" = "gtk";
-        "org.freedesktop.impl.portal.Settings" = "gnome";
+        # Provide a list for Settings to prevent "No such interface" errors
+        "org.freedesktop.impl.portal.Settings" = [
+          "gnome"
+          "gtk"
+        ];
         "org.freedesktop.impl.portal.OpenURI" = "gnome";
       };
     };
     configPackages = [
       pkgs.hyprland
       pkgs.niri
-      pkgs.xdg-desktop-portal-wlr
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-gnome
     ];
-  };
-
-  # Override systemd services to trick GNOME portal into loading for niri
-  systemd.user.services.xdg-desktop-portal = {
-    serviceConfig = {
-      Environment = [ "XDG_CURRENT_DESKTOP=niri:GNOME" ];
-    };
-  };
-
-  systemd.user.services.xdg-desktop-portal-gnome = {
-    serviceConfig = {
-      Environment = [ "XDG_CURRENT_DESKTOP=niri:GNOME" ];
-    };
   };
 
   services = {
