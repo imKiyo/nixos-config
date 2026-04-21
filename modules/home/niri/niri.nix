@@ -68,7 +68,7 @@ in
     slurp
     wl-clipboard
     swappy
-    xdg-desktop-portal-wlr
+    xdg-desktop-portal-hyprland
     dotool
     bemenu
   ];
@@ -202,9 +202,9 @@ in
     Install.WantedBy = [ "graphical-session.target" ];
   };
 
-  systemd.user.services.xdg-desktop-portal-wlr = {
+  systemd.user.services.xdg-desktop-portal-hyprland = {
     Unit = {
-      Description = "Portal service (wlroots implementation)";
+      Description = "Portal service (Hyprland/wlroots implementation)";
       After = [
         "graphical-session.target"
         "pipewire.service"
@@ -214,11 +214,15 @@ in
     };
     Service = {
       Type = "dbus";
-      BusName = "org.freedesktop.impl.portal.desktop.wlr";
-      ExecStart = "${pkgs.xdg-desktop-portal-wlr}/libexec/xdg-desktop-portal-wlr";
+      BusName = "org.freedesktop.impl.portal.desktop.hyprland";
+      ExecStart = "${pkgs.xdg-desktop-portal-hyprland}/libexec/xdg-desktop-portal-hyprland";
       Restart = "on-failure";
       Environment = [
         "XDG_CURRENT_DESKTOP=niri"
+        "XDG_SESSION_TYPE=wayland"
+        "LIBVA_DRIVER_NAME=iHD"
+        "WLR_RENDERER_ALLOW_SOFTWARE=1"
+        "XDPHLS_NO_DMABUF=1"
       ];
     };
     Install.WantedBy = [ "graphical-session.target" ];
@@ -246,16 +250,16 @@ in
     [preferred]
     default=gtk
     org.freedesktop.impl.portal.FileChooser=gtk
-    org.freedesktop.impl.portal.Screenshot=wlr
-    org.freedesktop.impl.portal.ScreenCast=wlr
+    org.freedesktop.impl.portal.Screenshot=hyprland
+    org.freedesktop.impl.portal.ScreenCast=hyprland
   '';
 
   xdg.configFile."xdg-desktop-portal/niri-portals.conf".text = ''
     [preferred]
     default=gtk
     org.freedesktop.impl.portal.FileChooser=gtk
-    org.freedesktop.impl.portal.Screenshot=wlr
-    org.freedesktop.impl.portal.ScreenCast=wlr
+    org.freedesktop.impl.portal.Screenshot=hyprland
+    org.freedesktop.impl.portal.ScreenCast=hyprland
   '';
 
   # Place wallpapers in home directory

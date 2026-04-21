@@ -117,6 +117,9 @@
     python3Packages.opencv4
     python3Packages.pillow
     python3Packages.numpy
+    warehouse
+    waydroid
+    anki
 
     # Development Tools
     zed-editor # Code editor with AI features
