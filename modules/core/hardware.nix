@@ -11,11 +11,9 @@
     graphics.enable = true;
     enableRedistributableFirmware = true;
     keyboard.qmk.enable = false;
-    bluetooth.enable = true;
-    bluetooth.powerOnBoot = true;
+    bluetooth.enable = false;
+    bluetooth.powerOnBoot = false;
   };
-
-
 
   # Udev rules for Corsair devices
   services.udev.extraRules = ''

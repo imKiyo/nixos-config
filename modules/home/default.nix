@@ -59,6 +59,7 @@ in
     ./yazi
     ./zoxide.nix
     ./environment.nix
+    ./rbw.nix
   ]
 
   # Window Managers - Both always available, user selects at login

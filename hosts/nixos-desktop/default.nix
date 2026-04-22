@@ -5,6 +5,28 @@
     ./host-packages.nix
   ];
 
+  # Self https certificate thingy
+  services.caddy = {
+    enable = true;
+    virtualHosts."https://localhost" = {
+      extraConfig = ''
+        tls internal
+        reverse_proxy 127.0.0.1:8222
+      '';
+    };
+  };
+
+  # Password Manager based on Bitwarden
+  services.vaultwarden = {
+    enable = true;
+    config = {
+      ROCKET_PORT = 8222;
+      ROCKET_ADDRESS = "127.0.0.1";
+      SIGNUPS_ALLOWED = false;
+      DOMAIN = "https://localhost";
+    };
+  };
+
   # Enable sddm display manager
   services.displayManager.sddm.enable = true;
 

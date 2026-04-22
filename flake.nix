@@ -1,5 +1,5 @@
 {
-  description = "Black Don OS (Based on ZaneyOS)";
+  description = "skibiditoilet67";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -59,11 +59,6 @@
       nixosConfigurations = {
         # Default template configuration
         # Users will create their own host configurations during installation
-        default = mkHost {
-          hostname = "default";
-          profile = "amd";
-          username = "user";
-        };
 
         nixos-desktop = mkHost {
           hostname = "nixos-desktop";
@@ -71,17 +66,6 @@
           username = "kiyo";
         };
 
-        nix-tester = mkHost {
-          hostname = "nix-tester";
-          profile = "intel";
-          username = "don";
-        };
-
-        nix-test = mkHost {
-          hostname = "nix-test";
-          profile = "intel";
-          username = "don";
-        };
       };
 
       # Flutter development environment

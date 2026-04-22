@@ -13,7 +13,7 @@
   '';
 
   # Waybar Settings
-  clock24h = false;
+  clock24h = true;
 
   # Default Applications
   browser = "zen";

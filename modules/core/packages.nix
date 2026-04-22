@@ -8,7 +8,7 @@
 {
   programs = {
     neovim = {
-      enable = false;
+      enable = true;
       defaultEditor = false;
     };
     firefox.enable = false; # Firefox is not installed by default
