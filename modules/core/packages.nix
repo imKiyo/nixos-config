@@ -120,6 +120,7 @@
     warehouse
     waydroid
     anki
+    baobab
 
     # Development Tools
     zed-editor # Code editor with AI features
