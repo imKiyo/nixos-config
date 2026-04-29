@@ -121,6 +121,7 @@
     waydroid
     anki
     baobab
+    element-desktop
 
     # Development Tools
     zed-editor # Code editor with AI features
