@@ -23,4 +23,5 @@ in
   spawn-at-startup "vesktop"
   spawn-at-startup "Telegram"
   spawn-at-startup "vicinae" "server"
+  spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP=niri"
 ''
