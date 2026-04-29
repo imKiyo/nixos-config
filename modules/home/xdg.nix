@@ -11,6 +11,7 @@
         "x-scheme-handler/about" = "zen-beta.desktop";
         "x-scheme-handler/unknown" = "zen-beta.desktop";
         "inode/directory" = "thunar.desktop";
+        "x-scheme-handler/terminal" = "kitty.desktop"; # or ghostty.desktop
       };
     };
 
@@ -31,6 +32,7 @@
       extraPortals = [
         pkgs.xdg-desktop-portal-gtk
         pkgs.xdg-desktop-portal-gnome
+        pkgs.xdg-desktop-portal-wlr
       ];
     };
   };
