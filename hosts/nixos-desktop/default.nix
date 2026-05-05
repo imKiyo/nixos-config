@@ -27,6 +27,8 @@
     };
   };
 
+  services.ssh-agent.enable = true;
+
   # Enable sddm display manager
   services.displayManager.sddm.enable = true;
 
@@ -35,6 +37,19 @@
 
   # Keep niri available at system level for ly display manager to detect it
   programs.niri.package = pkgs.niri;
+
+  programs.ssh = {
+    enable = true;
+    addKeysToAgent = "yes";
+    matchBlocks = {
+      "github.com" = {
+        hostname = "github.com";
+        user = "git";
+        identityFile = "~/.ssh/id_ed25519";
+        identitiesOnly = true;
+      };
+    };
+  };
 
   # Ensure niri session is available to display manager
   services.displayManager.sessionPackages = [ pkgs.niri ];
