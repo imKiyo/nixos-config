@@ -18,6 +18,8 @@ _: {
     pam.services.swaylock = {
       text = ''auth include login '';
     };
-
+    pki.certificateFiles = [
+      ./certs/caddy-local-ca.crt
+    ];
   };
 }

@@ -34,61 +34,61 @@
   }
 
   layout {
-      gaps 9
+        gaps 9
 
-      center-focused-column "never"
-      always-center-single-column
+        center-focused-column "never"
+        always-center-single-column
 
-      preset-column-widths {
-          proportion 0.5
-          proportion 0.66667
-          proportion 1.0
-      }
+        preset-column-widths {
+            proportion 0.5
+            proportion 0.66667
+            proportion 1.0
+        }
 
-      default-column-width { proportion 0.5; }
+        default-column-width { proportion 0.5; }
 
-      border {
-          width 2
-          active-color "#cba6f7"
-          inactive-color "#45475a"
-          urgent-color "#f5c2e7"
-      }
+        border {
+            width 2
+            # A deep, "dried blood" red for the active window
+            active-color "#8b0000"
+            # A dark, metallic charcoal for inactive windows
+            inactive-color "#1a1a1a"
+            # A high-contrast orange-red for urgent alerts
+            urgent-color "#ff4500"
+        }
 
-      focus-ring {
-          off
-          width 2
-          active-color   "#808080"
-          inactive-color "#505050"
-      }
+        focus-ring {
+            off
+            width 2
+            active-color   "#4d0000"
+            inactive-color "#121212"
+        }
 
-      shadow {
-          softness 30
-          spread 5
-          offset x=0 y=5
-          color "#0007"
-      }
+        shadow {
+            softness 30
+            spread 5
+            offset x=0 y=5
+            # Slightly tinted red shadow for a subtle glow effect
+            color "#2b000077"
+        }
 
-      struts {
-      }
-  }
+        struts {
+        }
+    }
 
-  /-layer-rule {
-      match namespace="^quickshell$"
-      place-within-backdrop true
-  }
+    overview {
+        # Deep navy-black backdrop to keep things dark
+        backdrop-color "#05050a"
 
-  overview {
-      backdrop-color "#1e1e2e"
+        workspace-shadow {
+            softness 40
+            spread 10
+            offset x=0 y=10
+            color "#00000080"
+        }
 
-      workspace-shadow {
-          softness 40
-          spread 10
-          offset x=0 y=10
-          color "#00000050"
-      }
-
-      zoom 0.5
-  }
+        zoom 0.5
+    }
 
   animations {
       workspace-switch {

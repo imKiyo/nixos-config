@@ -4,8 +4,7 @@
   zen-browser,
   host,
   ...
-}:
-{
+}: {
   programs = {
     neovim = {
       enable = true;
@@ -34,8 +33,7 @@
   virtualisation.libvirtd.enable = true;
 
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowUnfreePredicate =
-    pkg:
+  nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
       "zed"
     ];
@@ -122,6 +120,7 @@
     anki
     baobab
     element-desktop
+    bootdev-cli
 
     # Development Tools
     zed-editor # Code editor with AI features
@@ -135,5 +134,12 @@
     javaPackages.openjfx25
     vesktop
 
+    (pkgs.writers.writeDashBin "ascii" ''
+      exec ${pkgs.python311.withPackages (ps: [
+        ps.opencv4
+        ps.numpy
+        ps.typer
+      ])}/bin/python3 -m img2art.cli "$@"
+    '')
   ];
 }

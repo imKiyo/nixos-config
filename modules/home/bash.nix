@@ -21,6 +21,8 @@
       ".." = "cd ..";
       hosts = "dcli list-hosts";
       switch = "dcli switch-host";
+      conf = "nvim /home/kiyo/kiyo-os";
+      config = "nvim /home/kiyo/kiyo-os";
     };
   };
 }

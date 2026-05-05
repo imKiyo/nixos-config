@@ -31,10 +31,7 @@
   printEnable = false;
   thunarEnable = true;
   stylixEnable = true;
-
-  # Optional Features (disabled for faster initial install)
-  # You can enable these later by setting to true and rebuilding
-  gamingSupportEnable = false; # Gaming controllers, gamescope, protonup-qt
+  gamingSupportEnable = true; # Gaming controllers, gamescope, protonup-qt
   flutterdevEnable = false; # Flutter development environment
   syncthingEnable = false; # Syncthing file synchronization
   enableCommunicationApps = false; # Discord, Teams, Zoom, Telegram

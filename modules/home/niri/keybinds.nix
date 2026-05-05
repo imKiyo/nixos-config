@@ -79,6 +79,11 @@ let
             spawn "${dmsPath}" "ipc" "call" "audio" "micmute";
         }
 
+        // Media Keys (F3, F4, F5 as requested)
+        XF86AudioPrev allow-when-locked=true { spawn "playerctl" "previous"; }
+        XF86AudioPlay allow-when-locked=true { spawn "playerctl" "play-pause"; }
+        XF86AudioNext allow-when-locked=true { spawn "playerctl" "next"; }
+
         // === Monitor Brightness Controls ===
         XF86MonBrightnessUp allow-when-locked=true {
            spawn "${dmsPath}" "ipc" "call" "brightness" "increment" "5" "";
