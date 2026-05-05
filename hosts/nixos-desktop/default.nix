@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   imports = [
     ./hardware.nix
     ./host-packages.nix
@@ -26,8 +27,6 @@
     };
   };
 
-  services.ssh-agent.enable = true;
-
   # Enable sddm display manager
   services.displayManager.sddm.enable = true;
 
@@ -37,27 +36,14 @@
   # Keep niri available at system level for ly display manager to detect it
   programs.niri.package = pkgs.niri;
 
-  programs.ssh = {
-    enable = true;
-    addKeysToAgent = "yes";
-    matchBlocks = {
-      "github.com" = {
-        hostname = "github.com";
-        user = "git";
-        identityFile = "~/.ssh/id_ed25519";
-        identitiesOnly = true;
-      };
-    };
-  };
-
   # Ensure niri session is available to display manager
-  services.displayManager.sessionPackages = [pkgs.niri];
+  services.displayManager.sessionPackages = [ pkgs.niri ];
 
-  environment.systemPackages = with pkgs; [ydotool];
+  environment.systemPackages = with pkgs; [ ydotool ];
 
   systemd.user.services.ydotool = {
     description = "ydotool daemon";
-    wantedBy = ["default.target"];
+    wantedBy = [ "default.target" ];
     serviceConfig = {
       ExecStart = "${pkgs.ydotool}/bin/ydotoold";
       Restart = "always";
@@ -68,14 +54,12 @@
     enable = true;
     # We use overrideAttrs to manually set the GPU architecture to 5.2 (Maxwell)
     package = pkgs.ollama-cuda.overrideAttrs (oldAttrs: {
-      cmakeFlags =
-        (oldAttrs.cmakeFlags or [])
-        ++ [
-          "-DCMAKE_CUDA_ARCHITECTURES=52"
-        ];
+      cmakeFlags = (oldAttrs.cmakeFlags or [ ]) ++ [
+        "-DCMAKE_CUDA_ARCHITECTURES=52"
+      ];
     });
 
-    loadModels = ["dolphin-llama3:8b"];
+    loadModels = [ "dolphin-llama3:8b" ];
 
     environmentVariables = {
       OLLAMA_CUDA_COMPUTE_CAPABILITIES = "5.2";

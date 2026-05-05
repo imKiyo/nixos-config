@@ -14,7 +14,6 @@ let
   defaultShell = variables.defaultShell or "zsh";
   useNvidia = variables.useNvidia or false;
 
-
   # Legacy variable support (backwards compatibility)
   enableDMS = variables.enableDankMaterialShell or false;
   legacyBarChoice = if enableDMS then "dms" else "waybar";
@@ -60,6 +59,7 @@ in
     ./zoxide.nix
     ./environment.nix
     ./rbw.nix
+    ./ssh.nix
   ]
 
   # Window Managers - Both always available, user selects at login
