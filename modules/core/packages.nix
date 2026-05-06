@@ -133,6 +133,7 @@
     jetbrains.idea
     javaPackages.openjfx25
     vesktop
+    gcc
 
     (pkgs.writers.writeDashBin "ascii" ''
       exec ${pkgs.python311.withPackages (ps: [
