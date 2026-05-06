@@ -1,4 +1,5 @@
-{profile, ...}: {
+{ profile, ... }:
+{
   programs.bash = {
     enable = false;
     enableCompletion = true;
@@ -8,6 +9,8 @@
         source $HOME/.bashrc-personal
       fi
     '';
+
+    # NOT HERE lil bro, use /modules/home/zsh/zshrc-personal.nix
     shellAliases = {
       sv = "sudo nvim";
       fr = "dcli rebuild";
@@ -23,6 +26,7 @@
       switch = "dcli switch-host";
       conf = "nvim /home/kiyo/kiyo-os";
       config = "nvim /home/kiyo/kiyo-os";
+      nos = "cd ~/kiyo-os && git add . && git commit -m 'quick_update' && git push";
     };
   };
 }

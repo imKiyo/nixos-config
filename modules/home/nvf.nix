@@ -2,8 +2,9 @@
   inputs,
   config,
   ...
-}: {
-  imports = [inputs.nvf.homeManagerModules.default];
+}:
+{
+  imports = [ inputs.nvf.homeManagerModules.default ];
 
   programs.nvf = {
     enable = true;
@@ -15,10 +16,20 @@
       lineNumberMode = "relNumber";
       enableLuaLoader = true;
       preventJunkFiles = true;
+      telescope.enable = true;
+      git.gitsigns.enable = true;
+
+      binds.whichKey.enable = true;
+
+      spellChecking = {
+        enable = true;
+        programmingWordlist.enable = true;
+      };
 
       options = {
-        tabstop = 4;
+        tabstop = 2;
         shiftwidth = 2;
+        expandtab = true;
         wrap = false;
       };
 
@@ -34,73 +45,89 @@
       keymaps = [
         {
           key = "jk";
-          mode = ["i"];
+          mode = [ "i" ];
           action = "<ESC>";
           desc = "Exit insert mode";
         }
         {
           key = "<leader>nh";
-          mode = ["n"];
+          mode = [ "n" ];
           action = ":nohl<CR>";
           desc = "Clear search highlights";
         }
         {
           key = "<leader>ff";
-          mode = ["n"];
+          mode = [ "n" ];
           action = "<cmd>Telescope find_files<cr>";
           desc = "Search files by name";
         }
         {
           key = "<leader>lg";
-          mode = ["n"];
+          mode = [ "n" ];
           action = "<cmd>Telescope live_grep<cr>";
           desc = "Search files by contents";
         }
         {
           key = "<leader>e"; # Changed from <leader>fe to just <leader>e for speed
-          mode = ["n"];
+          mode = [ "n" ];
           action = "<cmd>Neotree toggle<cr>";
           desc = "File browser toggle";
         }
         {
           key = "<leader>t";
-          mode = ["n"];
+          mode = [ "n" ];
           action = "<cmd>ToggleTerm<CR>";
           desc = "Toggle terminal";
         }
         # Arrow-key style navigation in insert mode using Ctrl
-        { key = "<C-h>"; mode = ["i"]; action = "<Left>"; }
-        { key = "<C-j>"; mode = ["i"]; action = "<Down>"; }
-        { key = "<C-k>"; mode = ["i"]; action = "<Up>"; }
-        { key = "<C-l>"; mode = ["i"]; action = "<Right>"; }
+        {
+          key = "<C-h>";
+          mode = [ "i" ];
+          action = "<Left>";
+        }
+        {
+          key = "<C-j>";
+          mode = [ "i" ];
+          action = "<Down>";
+        }
+        {
+          key = "<C-k>";
+          mode = [ "i" ];
+          action = "<Up>";
+        }
+        {
+          key = "<C-l>";
+          mode = [ "i" ];
+          action = "<Right>";
+        }
 
         # Shortcut for the annoying way of toggling terminal
         {
           key = "<ESC>";
-          mode = ["t"];
+          mode = [ "t" ];
           action = "<C-\\><C-n>";
           desc = "Escape terminal mode with just Escape";
         }
         {
           key = "<leader>gc"; # "Go to Config"
-          mode = ["n"];
+          mode = [ "n" ];
           action = "<cmd>cd /home/kiyo/kiyo-os | Neotree toggle<cr>";
           desc = "Jump to NixOS config folder";
         }
         {
           key = "<leader>fr"; # "File Recent"
-          mode = ["n"];
+          mode = [ "n" ];
           action = "<cmd>Telescope oldfiles<cr>";
           desc = "Search recently opened files";
         }
       ];
 
       terminal = {
-              toggleterm = {
-                enable = true;
-                lazygit.enable = true;
-              };
-            };
+        toggleterm = {
+          enable = true;
+          lazygit.enable = true;
+        };
+      };
 
       ui = {
         borders.enable = true;
@@ -158,16 +185,9 @@
       dashboard.dashboard-nvim = {
         enable = true;
         setupOpts = {
+          theme = "doom";
           config = {
-            layout = [
-              { type = "header"; }
-              { type = "padding"; val = 2; }
-              { type = "group"; val = "center"; }
-              { type = "padding"; val = 1; }
-              { type = "footer"; }
-            ];
             header = [
-              "this thing even works?"
               "⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠟⠉⠁⠀⠀⠀⠀⠀⠀⣑⣿⣻⣿⣿⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
               "⠀⠀⠀⠠⢠⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⢻⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
               "⠀⠀⠀⢠⣪⣻⣿⣿⣿⣿⣿⣿⡿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣥⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
@@ -191,42 +211,32 @@
               "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⡀⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀"
               "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣄⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
               "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⡹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠿⠿⠿⡿⠿⠿⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+              ""
             ];
-            packages = { enable = false; };
-            project = { enable = false; };
-            mru = { enable = false; };
-
             center = [
               {
-                icon = "󰎚  ";
-                desc = "Quick Scratch Note";
-                # Creates a file like 2026-05-03_04-15.md in quick_notes
-                action = ''execute "e ~/Documents/quick_notes/" . strftime("%Y-%m-%d_%H-%M-%S") . ".md"'';
-                shortcut = "n";
-              }
-              {
                 icon = "󱞁  ";
-                desc = "New Obsidian Note";
-                action = "cd ~/Documents/Obsidian\\ Vault/ | Neotree reveal";
-                shortcut = "o";
+                desc = "Quick Scratch Note";
+                action = ''execute "e ~/Documents/Obsidian/quick_notes/" . strftime("%Y-%m-%d_%H-%M-%S") . ".md"'';
+                key = "n";
               }
               {
-                icon = "  ";
+                icon = "󰎚  ";
+                desc = "Obsidian Notes";
+                action = "cd ~/Documents/Obsidian/ | Neotree reveal";
+                key = "o";
+              }
+              {
+                icon = "󰎚  ";
                 desc = "System Config (NixOS)";
-                action = "cd /home/kiyo/kiyo-os | Neotree reveal"; # Jumps to folder + opens file tree
-                shortcut = "s";
-              }
-              {
-                icon = "󰒲  ";
-                desc = "Lazy Stats";
-                action = "Lazy";
-                shortcut = "l";
+                action = "cd /home/kiyo/kiyo-os | Neotree reveal";
+                key = "s";
               }
               {
                 icon = "󰈞  ";
                 desc = "Find File";
                 action = "Telescope find_files";
-                shortcut = "f";
+                key = "f";
               }
             ];
             footer = [ "" ];
@@ -234,15 +244,5 @@
         };
       };
     };
-  };
-
-  # This part handles your spellcheck wordlist download
-  home.activation = {
-    dirtytalkUpdate = config.lib.dag.entryAfter ["writeBoundary"] ''
-      WORDLIST_FILE="$HOME/.config/nvim/spell/programming.utf-8.add"
-      if [ ! -f "$WORDLIST_FILE" ]; then
-        ${config.programs.nvf.finalPackage}/bin/nvim -c "DirtytalkUpdate" -c "qa!" 2>/dev/null || true
-      fi
-    '';
   };
 }

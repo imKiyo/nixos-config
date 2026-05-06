@@ -16,11 +16,17 @@
       export PATH="$PATH":"$HOME/.pub-cache/bin"
       # export BROWSER="flatpak run app.zen_browser.zen"
 
-      #
-      export EDITOR="zeditor"
-      #export VISUAL="nvim"
+      alias z="cd"
+      alias conf="nvim /home/kiyo/kiyo-os"
+      alias config="nvim /home/kiyo/kiyo-os"
+      alias nalias="nvim /home/kiyo/kiyo-os/modules/home/zsh/zshrc-personal.nix"
+      alias nixgit="cd ~/kiyo-os && git add . && git commit -m 'quick_update' && git push"
 
-      #alias c="clear"
+
+      export EDITOR="nvim"
+      export VISUAL="nvim"
+
+      alias c="clear"
       #eval "$(zoxide init zsh)"
       #eval "$(oh-my-posh init zsh --config $HOME/.config/powerlevel10k_rainbow.omp.json)"
 
