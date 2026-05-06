@@ -2,9 +2,8 @@
   inputs,
   config,
   ...
-}:
-{
-  imports = [ inputs.nvf.homeManagerModules.default ];
+}: {
+  imports = [inputs.nvf.homeManagerModules.default];
 
   programs.nvf = {
     enable = true;
@@ -18,10 +17,11 @@
       preventJunkFiles = true;
       telescope.enable = true;
       git.gitsigns.enable = true;
+      mini.surround.enable = true;
 
       binds.whichKey.enable = true;
 
-      spellChecking = {
+      spellcheck = {
         enable = true;
         programmingWordlist.enable = true;
       };
@@ -45,80 +45,104 @@
       keymaps = [
         {
           key = "jk";
-          mode = [ "i" ];
+          mode = ["i"];
           action = "<ESC>";
           desc = "Exit insert mode";
         }
         {
           key = "<leader>nh";
-          mode = [ "n" ];
+          mode = ["n"];
           action = ":nohl<CR>";
           desc = "Clear search highlights";
         }
         {
           key = "<leader>ff";
-          mode = [ "n" ];
+          mode = ["n"];
           action = "<cmd>Telescope find_files<cr>";
           desc = "Search files by name";
         }
         {
           key = "<leader>lg";
-          mode = [ "n" ];
+          mode = ["n"];
           action = "<cmd>Telescope live_grep<cr>";
           desc = "Search files by contents";
         }
         {
           key = "<leader>e"; # Changed from <leader>fe to just <leader>e for speed
-          mode = [ "n" ];
+          mode = ["n"];
           action = "<cmd>Neotree toggle<cr>";
           desc = "File browser toggle";
         }
         {
           key = "<leader>t";
-          mode = [ "n" ];
+          mode = ["n"];
           action = "<cmd>ToggleTerm<CR>";
           desc = "Toggle terminal";
         }
         # Arrow-key style navigation in insert mode using Ctrl
         {
           key = "<C-h>";
-          mode = [ "i" ];
+          mode = ["i"];
           action = "<Left>";
         }
         {
           key = "<C-j>";
-          mode = [ "i" ];
+          mode = ["i"];
           action = "<Down>";
         }
         {
           key = "<C-k>";
-          mode = [ "i" ];
+          mode = ["i"];
           action = "<Up>";
         }
         {
           key = "<C-l>";
-          mode = [ "i" ];
+          mode = ["i"];
           action = "<Right>";
         }
 
         # Shortcut for the annoying way of toggling terminal
         {
           key = "<ESC>";
-          mode = [ "t" ];
+          mode = ["t"];
           action = "<C-\\><C-n>";
           desc = "Escape terminal mode with just Escape";
         }
         {
           key = "<leader>gc"; # "Go to Config"
-          mode = [ "n" ];
+          mode = ["n"];
           action = "<cmd>cd /home/kiyo/kiyo-os | Neotree toggle<cr>";
           desc = "Jump to NixOS config folder";
         }
         {
           key = "<leader>fr"; # "File Recent"
-          mode = [ "n" ];
+          mode = ["n"];
           action = "<cmd>Telescope oldfiles<cr>";
           desc = "Search recently opened files";
+        }
+        {
+          key = "z";
+          mode = [ "n" "x" "o" ];
+          action = ''lua require("flash").jump()'';
+          desc = "Flash Jump";
+        }
+        {
+          key = "S";
+          mode = [ "n" "x" "o" ];
+          action = ''lua require("flash").treesitter()'';
+          desc = "Flash Treesitter";
+        }
+        {
+          key = "<leader>gh";
+          mode = [ "n" ];
+          action = "<cmd>DiffviewFileHistory %<cr>";
+          desc = "Git File History (Current File)";
+        }
+        {
+          key = "<leader>gd";
+          mode = [ "n" ];
+          action = "<cmd>DiffviewOpen<cr>";
+          desc = "Git Diff Tool";
         }
       ];
 
@@ -138,9 +162,15 @@
         fastaction.enable = true;
       };
 
+      utility = {
+        motion.flash-nvim.enable = true;
+        diffview-nvim.enable = true;
+      };
+      
+      
       lsp = {
         enable = true;
-        formatOnSave = true;
+        formatOnSave = false;
         lspkind.enable = false;
         lightbulb.enable = false;
         lspsaga.enable = false;
@@ -239,7 +269,7 @@
                 key = "f";
               }
             ];
-            footer = [ "" ];
+            footer = [""];
           };
         };
       };
