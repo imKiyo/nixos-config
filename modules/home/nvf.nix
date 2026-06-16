@@ -182,7 +182,7 @@
         enableTreesitter = true;
         enableExtraDiagnostics = true;
         nix.enable = true;
-        nix.lsp.server = "nixd";
+        nix.lsp.server = [ "nixd" ];
         clang.enable = true;
         zig.enable = true;
         python.enable = true;

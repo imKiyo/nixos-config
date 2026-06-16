@@ -19,7 +19,6 @@
       }
       touchpad {
           // Natural scrolling inverts scroll direction
-          // Up swipe scrolls down, down swipe scrolls up (natural direction)
           natural-scroll
       }
       mouse {
@@ -45,15 +44,15 @@
             proportion 1.0
         }
 
-        default-column-width { proportion 0.5; }
+        default-column-width {
+            proportion 0.5
+        }
 
         border {
             width 2
-            # A deep, "dried blood" red for the active window
             active-color "#8b0000"
-            # A dark, metallic charcoal for inactive windows
             inactive-color "#1a1a1a"
-            # A high-contrast orange-red for urgent alerts
+            // A high-contrast orange-red for urgent alerts
             urgent-color "#ff4500"
         }
 
@@ -68,7 +67,7 @@
             softness 30
             spread 5
             offset x=0 y=5
-            # Slightly tinted red shadow for a subtle glow effect
+            // Slightly tinted red shadow for a subtle glow effect
             color "#2b000077"
         }
 
@@ -77,7 +76,7 @@
     }
 
     overview {
-        # Deep navy-black backdrop to keep things dark
+        // Deep navy-black backdrop to keep things dark
         backdrop-color "#05050a"
 
         workspace-shadow {

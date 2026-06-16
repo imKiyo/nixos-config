@@ -21,6 +21,9 @@
       alias config="nvim /home/kiyo/kiyo-os"
       alias nalias="nvim /home/kiyo/kiyo-os/modules/home/zsh/zshrc-personal.nix"
       alias nixgit="cd ~/kiyo-os && git add . && git commit -m 'quick_update' && git push"
+      alias obsgit="cd /home/kiyo/Documents/Obsidian && git add . && git commit -m 'quick_update' && git push"
+      alias nobs="nvim /home/kiyo/Documents/Obsidian"
+      alias nobsidian="nvim /home/kiyo/Documents/Obsidian"
 
 
       export EDITOR="nvim"

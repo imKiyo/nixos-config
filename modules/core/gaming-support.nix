@@ -86,6 +86,8 @@ lib.mkIf gamingSupportEnable {
     # Gaming tools
     gamescope # Gaming-focused Wayland compositor
     protonup-qt # Proton-GE and other compatibility tool installer
+    mangohud
+    hydralauncher
 
     # SDL2 with controller support
     SDL2

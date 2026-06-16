@@ -22,7 +22,6 @@
     hyprlock.enable = true; # Resolve pam issue, can be disabled per-host via enableHyprlock
     fuse.userAllowOther = true;
     mtr.enable = true;
-    adb.enable = true;
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
@@ -121,6 +120,10 @@
     baobab
     element-desktop
     bootdev-cli
+    kicad
+    freecad
+    qutebrowser
+    #motrix-next dunno why but it finding this package, i might need to update system but thats a whole new problems to solve
 
     # Development Tools
     zed-editor # Code editor with AI features
@@ -134,13 +137,14 @@
     javaPackages.openjfx25
     vesktop
     gcc
+    lutris
 
-    (pkgs.writers.writeDashBin "ascii" ''
-      exec ${pkgs.python311.withPackages (ps: [
-        ps.opencv4
-        ps.numpy
-        ps.typer
-      ])}/bin/python3 -m img2art.cli "$@"
-    '')
+    # (pkgs.writers.writeDashBin "ascii" ''
+    #   exec ${pkgs.python311.withPackages (ps: [
+    #     ps.opencv4
+    #     ps.numpy
+    #     ps.typer
+    #   ])}/bin/python3 -m img2art.cli "$@"
+    # '')
   ];
 }

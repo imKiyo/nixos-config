@@ -60,6 +60,7 @@ in
     ./environment.nix
     ./rbw.nix
     ./ssh.nix
+    ./apps.nix
   ]
 
   # Window Managers - Both always available, user selects at login
