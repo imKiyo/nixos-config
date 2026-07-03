@@ -10,6 +10,16 @@
     gnome.gnome-keyring.enable = true;
     upower.enable = true; # Power management (required for DMS battery monitoring)
 
+    udev.extraRules = ''
+      # QMK/VIA WebHID / RP2040 Bootloader permissions
+      SUBSYSTEMS=="usb", ATTRS{idVendor}=="feed", MODE:="0666"
+      SUBSYSTEMS=="usb", ATTRS{idVendor}=="1209", MODE:="0666"
+      SUBSYSTEMS=="usb", ATTRS{idVendor}=="2e8a", MODE:="0666"
+      KERNEL=="hidraw*", ATTRS{idVendor}=="feed", MODE:="0666"
+      KERNEL=="hidraw*", ATTRS{idVendor}=="1209", MODE:="0666"
+      KERNEL=="hidraw*", ATTRS{idVendor}=="2e8a", MODE:="0666"
+    '';
+
     smartd = {
       enable =
         if profile == "vm"

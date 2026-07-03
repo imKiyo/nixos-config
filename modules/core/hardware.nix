@@ -10,7 +10,7 @@
     logitech.wireless.enableGraphical = false;
     graphics.enable = true;
     enableRedistributableFirmware = true;
-    keyboard.qmk.enable = false;
+    keyboard.qmk.enable = true;
     bluetooth.enable = true;
     bluetooth.powerOnBoot = false;
   };

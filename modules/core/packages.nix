@@ -37,6 +37,14 @@
       "zed"
     ];
 
+  nixpkgs.overlays = [
+    (final: prev: {
+      dfu-programmer = prev.dfu-programmer.overrideAttrs (oldAttrs: {
+        NIX_CFLAGS_COMPILE = (oldAttrs.NIX_CFLAGS_COMPILE or "") + " -std=gnu17";
+      });
+    })
+  ];
+
   environment.systemPackages = with pkgs; [
     amfora # Fancy Terminal Browser For Gemini Protocol
     appimage-run # Needed For AppImage Support
@@ -123,7 +131,11 @@
     kicad
     freecad
     qutebrowser
+    ungoogled-chromium
     #motrix-next dunno why but it finding this package, i might need to update system but thats a whole new problems to solve
+    freetype
+    jujutsu
+    plover
 
     # Development Tools
     zed-editor # Code editor with AI features
@@ -138,6 +150,8 @@
     vesktop
     gcc
     lutris
+    qmk
+    helix
 
     # (pkgs.writers.writeDashBin "ascii" ''
     #   exec ${pkgs.python311.withPackages (ps: [
